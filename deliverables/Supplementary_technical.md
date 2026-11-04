@@ -53,7 +53,7 @@ composed horizon net benefit at a 5% threshold, four panels.
 
 | Arm | China AUROC | Korea AUROC | Mexico AUROC | US AUROC | NB @5% CN / KR / MX / US |
 |---|---|---|---|---|---|
-| Primary: ten concepts, time-included, 4 y, unweighted | 0.7033 / 0.6640 | 0.6605 / 0.7063 | 0.6588 / 0.6107 | 0.6852 / 0.7263 | −0.00015 / −0.00093 / −0.00449 / +0.00213 |
+| Reference logistic specification (sensitivity arm): ten concepts, time-included, 4 y, unweighted | 0.7033 / 0.6640 | 0.6605 / 0.7063 | 0.6588 / 0.6107 | 0.6852 / 0.7263 | −0.00015 / −0.00093 / −0.00449 / +0.00213 |
 | No time term in the hazard | 0.7137 / 0.6649 | 0.6570 / 0.7033 | 0.6616 / 0.6104 | 0.6819 / 0.7215 | +0.00016 / −0.00047 / −0.00295 / +0.00168 |
 | Extended set: + income, measured BMI, cholesterol (imputed where unobserved) | 0.7023 / 0.6613 | 0.6599 / 0.7067 | 0.6594 / 0.6086 | 0.6839 / 0.7004 | −0.00041 / −0.00099 / −0.00472 / +0.00117 |
 | Survey design weights in fitting and evaluation† | 0.6984 / 0.6616 | 0.6466 / 0.6977 | 0.6546 / 0.6210 | 0.6603 / 0.7039 | −0.00006 / −0.00162 / −0.00822 / +0.00050 |

@@ -31,9 +31,14 @@ ok("frozen release tag v1.0.0" in text, "code availability missing the frozen re
 ok("cannot drift apart" not in text, "absolute 'cannot drift apart' overclaim remains")
 ok("[AUTHOR-SPECIFIC" in text[text.index("## Code availability"):text.index("## Ethics")], "Zenodo-DOI placeholder must remain (author-issued)")
 
-# ---------- P0-4 / P1-1 ----------
+# ---------- P0-4 / P1-1 / round-13 model-attribution fix ----------
 ok("survey-ascertainable probability of a first reported stroke" in text, "P0-4 estimand lead missing")
-ok("Every figure in this paragraph is on the separately-fitted (V4) arm" in text, "P1-1 model-identity note missing")
+ok("survey-ascertainable probability of a first reported stroke, not the true clinical first-stroke incidence" in text,
+   "Results opening estimand-scope sentence missing (P0-5)")
+ok('the parenthetical "3 of 40 under the published arm" is the separately-fitted V4 value' in text
+   and "are the primary joint-model results (Table 19)" in text
+   and "Every figure in this paragraph is on the separately-fitted (V4) arm" not in text,
+   "P0-1 joint/V4 attribution not corrected in the composition paragraph")
 
 # ---------- P1-4 : Korea qualifier on all core tables ----------
 ok(text.count("partial-outcome external validation") >= 5,

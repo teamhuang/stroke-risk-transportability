@@ -75,7 +75,10 @@ Everything else - the separately-fitted marginal-hazard ladder (Table 7), the li
 specification sweep (Table 8), the definitional ablation (Table 9), the cross-sectional (prevalent) arm, the
 exact-Shapley attributions and the classifier comparison - is reported as a *labelled sensitivity analysis*
 or in the Supplementary Information, and none of it carries a headline claim. The primary estimator throughout
-is the joint multinomial competing-risks model.
+is the joint multinomial competing-risks model. The risk reported on every line of this section is the
+survey-ascertainable probability of a first reported stroke, not the true clinical first-stroke incidence; the two
+coincide only under the non-differential-ascertainment assumption made explicit in Methods, and every calibration
+statement below is therefore about the survey-observable quantity.
 
 ### Study population and outcome ascertainment
 
@@ -290,11 +293,11 @@ near-1 calibration should not be read as a clinically validated competing-risk r
 The conclusion is invariant. Across the three compositions Mexico spans 2.93-3.00-fold, every panel moves
 by at most ~3.4% relative, and the pre-specified criterion - Mexico above 2.0 with an interval excluding
 1.0 - holds under the principled joint model (2.975 [2.61, 3.43]). The local repair survives it too: under
-the joint arm a 5% Mexican intercept shifts net benefit by +0.00368 (2.5th–97.5th percentile range across
-the 40 adaptation/evaluation splits +0.00342 to
-+0.00387, ahead of the frozen model in 40 of 40 splits) and restores the level to 1.14, clearing
+the joint arm a 5% Mexican intercept shifts net benefit by +0.00368 (a split-variability band of +0.00342 to
++0.00387 across 40 adaptation/evaluation draws, improving net benefit in
+every evaluated random split) and restores the level to 1.14, clearing
 treat-none in 8 of 40 splits (against 3 of 40 under the published arm), each by less than one net person.
-Every figure in this paragraph is on the separately-fitted (V4) arm and is reported to bound the composition assumption, not as the headline; the primary estimator is the joint model of Table 3. The composition, then, is worth a few percent; it is not worth the threefold error it was raised
+These repair figures - the joint-model P/O 2.975 [2.61, 3.43], the +0.00368 net-benefit gain and the 8-of-40 treat-none count - are the primary joint-model results (Table 19); the parenthetical "3 of 40 under the published arm" is the separately-fitted V4 value, quoted only to bound the composition assumption and not as the headline. The composition, then, is worth a few percent; it is not worth the threefold error it was raised
 to explain, and the paper's absolute-risk claim does not rest on which of the three is printed.
 
 #### Deciding whether to move the model, before knowing which country it has landed in
@@ -1109,7 +1112,8 @@ two-panel design suggested. Third, the failure mode that matters is level, not r
 can rank a foreign cohort almost as well as it ranks its own and still deliver absolute risks
 three times too high - and that over-prediction is a risk difference, not a measurement artefact, because
 refitting everything without the two concepts the four questionnaires do not ask in the same words moves
-Mexico's level ratio by 5.5% relative and *away* from correct (Table 9) - and the *direction* of that
+Mexico's level ratio by 5.5% relative and *away* from correct (Table 9, run on the separately-fitted V4
+sensitivity model, so this ablation characterises V4 rather than the joint primary estimator) - and the *direction* of that
 level error depends on the model family
 (linear models over-predict the United States by 1.16-fold, tree ensembles under-predict it by
 0.80–0.84-fold). Fourth, the repair is cheap, is not free, and is not universal: one intercept fitted on
@@ -1834,7 +1838,7 @@ public releases were accessed; only summary statistics and the analysis code are
 
 ## Code availability
 
-All scripts that regenerate every table, figure and number in this manuscript - the person-period expansion and censoring rules, the leave-one-country-out fits with person-clustered bootstrap, the joint multinomial competing-risks primary model and its separately-fitted sensitivity arms, the interval-censored likelihood and the three observed-risk event-time allocations, the flexible-hazard pooled-likelihood comparator, the strict/partial-coverage refits, the decision-curve and update-policy analyses, and the deterministic audit gate - are released as one versioned, citable repository at https://github.com/teamhuang/stroke-risk-transportability (frozen release tag v1.0.0) with a pinned environment, fixed random seeds, a documented run order, the expected output of each script and a synthetic ground-truth check (`synthcheck.py`) that exercises the pipeline without any restricted cohort data. No published number is transcribed by hand: each is printed by a script that reads the dated CSV the model wrote, so a figure, a table and the prose citing it are generated from the same source; the deterministic audit gate re-checks these equalities on every build.
+All scripts that regenerate every table, figure and number in this manuscript - the person-period expansion and censoring rules, the leave-one-country-out fits with person-clustered bootstrap, the joint multinomial competing-risks primary model and its separately-fitted sensitivity arms, the interval-censored likelihood and the three observed-risk event-time allocations, the flexible-hazard pooled-likelihood comparator, the strict/partial-coverage refits, the decision-curve and update-policy analyses, and the deterministic audit gate - are released as one versioned, citable repository at https://github.com/teamhuang/stroke-risk-transportability (frozen release tag v1.0.0, archived with the pinned environment `requirements.txt`, fixed random seed 20261101 and single-thread BLAS/OpenMP settings, a documented run order, the expected output of each script and a synthetic ground-truth check `synthcheck.py` that exercises the pipeline without any restricted cohort data). No published number is transcribed by hand: each is printed by a script that reads the dated CSV the model wrote, so a figure, a table and the prose citing it are generated from the same source; seven deterministic consistency gates (`audit_consistency_round6`–`round12`, 564 assertions in total) are included in the repository and re-check every headline equality against the aggregate tables and the manuscript text, and all seven pass run directly from the frozen package with no restricted data.
 
 The repository ships code and de-identified aggregate results only. Person-level cohort records are governed by their data-use agreements and are not redistributed; reproducing the analysis end-to-end requires each user to obtain the CHARLS, KLoSA, MHAS and RAND HRS releases from their own portals, as described in the repository README. The frozen release will additionally receive an archived [AUTHOR-SPECIFIC: Zenodo DOI <10.5281/zenodo.XXXXXXX>, minted when the authors connect release v1.0.0 to Zenodo and publish it]; this is an author-issued identifier and is not filled here.
 
@@ -1848,15 +1852,13 @@ information, and used no data beyond the public releases described above.
 
 ## Author contributions
 
-CRediT taxonomy.
+CRediT taxonomy (author initials: J.H. = Jianhuang Huang, Y.L. = Yangyang Lin, Q.W. = Qixiu Wang, J.C. = Jianning Chen).
 
-Conceptualization: Jianhuang Huang, Yangyang Lin, Qixiu Wang, Jianning Chen. Methodology: Jianhuang Huang,
-Yangyang Lin, Qixiu Wang. Software: Jianhuang Huang, Yangyang Lin. Validation: Jianhuang Huang, Qixiu Wang,
-Jianning Chen. Formal analysis: Jianhuang Huang, Yangyang Lin, Qixiu Wang. Investigation: Yangyang Lin,
-Qixiu Wang. Data curation: Yangyang Lin, Qixiu Wang. Writing — original draft: Jianhuang Huang, Yangyang Lin.
-Writing — review & editing: Jianhuang Huang, Qixiu Wang, Jianning Chen. Visualization: Jianhuang Huang,
-Yangyang Lin. Supervision: Jianning Chen. Project administration: Jianning Chen, Jianhuang Huang. All authors
-have read and approved the final manuscript and accept accountability for the work.
+Conceptualization: J.H., Y.L., Q.W., J.C. Methodology: J.H., Y.L., Q.W. Software: J.H., Y.L. Validation: J.H.,
+Q.W., J.C. Formal analysis: J.H., Y.L., Q.W. Investigation: Y.L., Q.W. Data curation: Y.L., Q.W. Writing —
+original draft: J.H., Y.L. Writing — review & editing: J.H., Q.W., J.C. Visualization: J.H., Y.L. Supervision:
+J.C. Project administration: J.C., J.H. All authors have read and approved the final manuscript and accept
+accountability for the work.
 
 Computational-tool disclosure (does not substitute for the author contributions above): an AI coding assistant
 supported the pipeline implementation and drafting of method text under the direction of the listed authors; the
@@ -2345,7 +2347,7 @@ prediction models, so all four are stated here.
 
 ### Supplementary tables
 
-All Supplementary Tables (S1-S8: horizon accounting and vital-status record; logistic sensitivity arms; the cross-sectional prevalent arm; the NHANES descriptive arm; exact-Shapley attributions; the two-dimensional unreported-pre-fatal-stroke sensitivity; the classifier comparison on the shared estimand; and the logistic update grid) are provided in the accompanying Supplementary Information booklet, which shares this article's version tag and numbering.
+All Supplementary Tables (S1-S9: horizon accounting and vital-status record; logistic sensitivity arms; the cross-sectional prevalent arm; the NHANES descriptive arm; exact-Shapley attributions; the two-dimensional unreported-pre-fatal-stroke sensitivity; the classifier comparison on the shared estimand; the logistic update grid; and the known-truth simulation that bounds the composition bias) are provided in the accompanying Supplementary Information booklet, which shares this article's version tag and numbering.
 
 ## Figures
 
