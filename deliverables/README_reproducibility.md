@@ -322,7 +322,7 @@ python make_figures.py           # 16 panels -> output/figures/
 #         figures + manuscript/SI/READMEs and DROPS every person-level file (personperiod_*, hrs_times.csv, the 74 MB
 #         incident_personperiod_pooled_*.csv and the person-level leakage_audit CSV) by header id-column scan; the
 #         aggregate incident working layer that audit gates round6-11 read is shipped so all seven gates PASS
-#         self-contained from the package (132 MB, 405 files, largest object 13.87 MB). .gitignore re-excludes
+#         self-contained from the package (132 MB, 407 tracked files, largest object 13.87 MB). .gitignore re-excludes
 #         person-level files on any local re-run. manuscript.md Code availability updated to the real URL + v1.0.0
 #         (Zenodo DOI remains [AUTHOR-SPECIFIC] until the authors connect the release and publish it); SUBMISSION_
 #         BLOCKERS updated; round12 gate re-contracted to assert the published URL/tag (45 assertions). A top-level
