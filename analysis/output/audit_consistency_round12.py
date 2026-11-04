@@ -55,7 +55,7 @@ ok("pre-audit" not in supp and "wrong-scale" not in supp, "dev language remains 
 # ---------- numbers preserved ----------
 for v in ["0.802", "1.147", "2.975", "0.897", "3.004"]:
     ok(v in text, f"joint/V4 value {v} missing")
-ok(text.count("[AUTHOR-SPECIFIC") == 34, f"AUTHOR-SPECIFIC count {text.count('[AUTHOR-SPECIFIC')} != 34")
+ok(text.count("[AUTHOR-SPECIFIC") == 2, f"AUTHOR-SPECIFIC count {text.count('[AUTHOR-SPECIFIC')} != 2 (back-matter author items resolved/removed at author instruction; only code-DOI + AI-policy confirm remain)")
 
 if fails:
     print(f"ran {len(checks)} assertions"); print("FAIL:")
@@ -65,4 +65,4 @@ print(f"ran {len(checks)} assertions")
 print("PASS round-12: 14 figures embedded (6 main + 8 SI, all PNGs on disk); code availability honest; "
       "P0-4 survey-ascertainable lead; Korea partial-outcome qualifier on Tables 3/4/10/11/17; Table 3/4 "
       "estimator clarified; S6 hypothetical emphasised; SI version tag round-11; internal .md filename removed; "
-      "Korea footnote order fixed; dev language stripped; joint 0.802/1.147/2.975/0.897 + V4 3.004 preserved; 34 placeholders.")
+      "Korea footnote order fixed; dev language stripped; joint 0.802/1.147/2.975/0.897 + V4 3.004 preserved; 2 remaining author-only items (code-DOI, AI-policy).")

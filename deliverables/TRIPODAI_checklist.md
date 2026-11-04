@@ -79,17 +79,20 @@ applicable to this study design (reason given).
 
 | Item | Descriptor | Where reported | Status |
 |---|---|---|---|
-| 25 | Funding | Acknowledgments: "No external funding" + [AUTHOR-SPECIFIC] grant placeholders | P (author input) |
-| 26 | Data availability | Data availability statement with per-cohort gated routes (CHARLS/KLoSA/MHAS/HRS; NHANES public) | R |
-| 27a | Code availability / reproducibility | Code availability names every script incl. round-7 additions; README_reproducibility.md; seeds + thread lock | R |
+| 25 | Funding | Acknowledgments: explicit "no funds, grants or other financial support" | R |
+| 26 | Data availability | Data availability statement with per-cohort access routes (CHARLS/KLoSA/MHAS/HRS; NHANES public) | R |
+| 27a | Code availability / reproducibility | Code availability points to the released repository (github.com/teamhuang/stroke-risk-transportability, tag v1.0.0); full per-script run order in README_reproducibility.md; seeds + thread lock | R |
 | 27b | User interaction / expertise for the model | Discussion: illustrative 5% threshold, flagging for further assessment; deployment framework described | R |
 | 27c | Next steps for future research / applicability | Discussion limitations + prospective-validation and common-core re-fit as open items | R |
 
 ## Honest gaps (must be closed by authors before submission)
 
-- Item 25 (Funding) and the author-contribution/competing-interest/ethics statements carry [AUTHOR-SPECIFIC]
-  placeholders — they cannot be completed by the analysis pipeline and must be supplied and confirmed by the
-  named authors.
+- Item 25 (Funding) is now stated as no-funding; author contributions are CRediT-assigned; competing interests
+  declared "none"; the ethics section states the secondary-analysis-of-de-identified-data basis. The manuscript
+  retains only two [AUTHOR-SPECIFIC] items — the archived code DOI and the AI-authorship-policy confirmation.
+  The substantive compliance obligations the author chose to state outside the manuscript text (ORCID iDs, the
+  institution's ethics determination, and the per-cohort data-use / AI-processing licences incl. MHAS and KLoSA)
+  remain the authors' to satisfy; they are recorded in `docs/SELF_AUDIT.md` and `SUBMISSION_BLOCKERS.md`.
 - Items 6c and 8c (blinding) are NA by design (self-reported survey outcome) and are stated as such rather
   than filled with an untrue "blinding performed".
 - The estimand-dependence items (12e/19/22) now point to the round-7 interval-censored evaluation (Table 15)

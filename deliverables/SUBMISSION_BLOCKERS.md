@@ -5,9 +5,10 @@ records what is missing from the **submission**. Nothing here is a scientific de
 either a fact only a human can supply, a licence or ethics condition that has not been read from an
 authoritative source, or a decision whose cost is a change to published numbers.
 
-The manuscript is not submittable until every item marked BLOCKING is closed. `## Ethics`,
-`Author contributions`, `Competing interests` and `Funding` in `deliverables/manuscript.md` currently
-contain placeholder prose, and placeholders must not survive into a submission.
+The manuscript is not submittable until every item marked BLOCKING is closed. As of 2026-11-05 the
+`## Ethics`, `Author contributions`, `Competing interests` and `Funding` sections in
+`deliverables/manuscript.md` carry clean minimal statements (no placeholder prose); the only remaining
+in-text `[AUTHOR-SPECIFIC]` markers are the archived code DOI and the AI-authorship-policy confirmation. See §Z.
 
 ---
 
@@ -167,32 +168,42 @@ estimand: if a reviewer asks which algorithm transfers best under V4, the answer
    trail in first-person-plural terms that need to become the authors' own.
 
 
-## Z. Complete list of remaining author-only items (34 [AUTHOR-SPECIFIC] placeholders in manuscript.md)
+## Z. Remaining author-only items (now 2 [AUTHOR-SPECIFIC] placeholders in manuscript.md)
 
-These are facts the analysis cannot produce and must NEVER be invented by it. Each is a required author action:
+Back-matter status after the round-12 author instruction (2026-11-05). The author directed that ORCID iDs, the
+per-cohort ethics/informed-consent enumeration and the secondary-data-licence statements be **removed from the
+manuscript text**, that **CRediT** contributions be assigned, and that **funding be declared as none**. Those were
+done: the Ethics section now carries only a minimal factual statement (secondary analysis of de-identified public
+releases; no new participant contact), Competing interests reads "none declared", Acknowledgments states no funding,
+and Author contributions are CRediT-assigned across Jianhuang Huang, Yangyang Lin, Qixiu Wang and Jianning Chen. The
+only [AUTHOR-SPECIFIC] markers left in the manuscript are (i) the archived **code DOI** and (ii) the **AI-authorship
+policy confirmation**.
 
-- Front matter: **author list, order, numbered affiliations and corresponding authors SUPPLIED by the authors on
-  2026-11-04** (Jianhuang Huang¹ # *, Yangyang Lin² #, Qixiu Wang³ #, Jianning Chen¹ *; Affiliated Hospital of Putian
-  University / Chinese People's Armed Police Force Fujian Provincial Corps Hospital / Affiliated Hospital of Liaoning
-  University of Traditional Chinese Medicine; correspondence Jianhuang Huang teamhuang@sina.com and Jianning Chen
-  cjn2006@sohu.com). **Remaining front-matter gap: ORCIDs** — not supplied, still a placeholder.
-- Ethics: the submitting institution's named exemption/approval determination (the study is a secondary analysis of
-  de-identified public releases, but the exempt/not-exempt call is the authors' institution's to make, not inferable
-  from de-identification), and, per cohort (HRS/CHARLS/KLoSA/MHAS), the parent-study ethics body, protocol/approval
-  identifier, consent procedure and secondary-use authorisation, read from each study's own documentation.
-- Data-use terms: confirm each cohort's licence permits automated/AI-assisted processing and describes this analysis
-  as used; if a cohort's terms prohibit it, that cohort must be removed from the four-country comparison (KLoSA needs
-  registration + a study creation code; MHAS/ELES terms must be read individually).
-- Code availability: the versioned repository is published at https://github.com/teamhuang/stroke-risk-transportability
-  (frozen release tag v1.0.0) — code + de-identified aggregate results + figures, no person-level data. STILL OUTSTANDING:
-  connect release v1.0.0 to Zenodo and publish to mint the archived version DOI; nothing here should be filled with a
-  placeholder DOI.
-- Author contributions: CRediT roles assigned by author initials; approval of the final version; accountability.
-- Competing interests and funding: all-author confirmation; declare any grant numbers and any data-use restriction
-  limiting redistribution of harmonised files.
+These are facts the analysis cannot produce and must NEVER be invented by it:
 
-Until these are supplied and every author signs off, the file is a complete, audited scientific draft but NOT an
-uploadable submission (journal policy: authorship, ethics and data/code access statements must be real and complete).
+- Code availability (in-text placeholder): the repository is published at
+  https://github.com/teamhuang/stroke-risk-transportability (frozen release tag v1.0.0) — code + de-identified
+  aggregate results + figures, no person-level data. STILL OUTSTANDING: connect release v1.0.0 to Zenodo and publish
+  to mint the archived version DOI; do not fill it with a placeholder DOI.
+- AI-authorship statement (in-text placeholder): confirm the tool-disclosure wording against the journal's
+  generative-AI authorship policy and the final author list.
+
+Separately, the following are now **out-of-text obligations** — removed from the manuscript at the author's direction
+but NOT thereby discharged; the author remains responsible for them and for the submission-portal fields:
+
+- ORCID iDs for each author (collected by most journals at submission, not required inside the manuscript body).
+- The submitting institution's ethics determination (exemption or approval) for this secondary analysis.
+- Per-cohort data-use / AI-processing licence compliance — in particular the **MHAS AI-assisted-processing** terms
+  and the **KLoSA registration / licence** terms (see `docs/SELF_AUDIT.md` O7/O8/O22). If any cohort's terms prohibit
+  the processing used here, that cohort's results must be withdrawn; the analysis was run with the author's
+  attestation, not an independently verified licence reading.
+
+Author list, order, numbered affiliations and corresponding authors remain as supplied by the authors on 2026-11-04
+(Jianhuang Huang¹ # *, Yangyang Lin² #, Qixiu Wang³ #, Jianning Chen¹ *; teamhuang@sina.com and cjn2006@sohu.com).
+
+The manuscript's Ethics / Funding / Competing-interests / Data-availability statements are present and minimal, so
+the file satisfies the journal's structural requirement; the out-of-text compliance items above are what still gate
+an actual upload, and they cannot be closed by this pipeline.
 
 ### Round-10 closure note (2026-11-04)
 

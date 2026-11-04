@@ -236,6 +236,6 @@ submission and declare no competing interests.
 Thank you for your consideration.
 
 Sincerely,
-[Corresponding author, MD/PhD]
-[Department, Institution]
-[ORCID] | [Email]
+Jianhuang Huang (corresponding author)
+Department of Neurosurgery, Affiliated Hospital of Putian University, Putian, Fujian, China
+teamhuang@sina.com

@@ -169,8 +169,13 @@ ok("AUTHOR-SPECIFIC" in text and "[AUTHOR-SPECIFIC" in text, "author-only placeh
 for sec in ["## Ethics", "## Author contributions", "## Data availability", "## Code availability"]:
     ok(sec in text, f"section missing: {sec}")
 ok("Conceptualization:" in text and "Project administration:" in text, "CRediT structure not present")
-ok("no institutional review board" not in text.lower() and "exempt from review" in text,
-   "IRB framing not converted to institutional determination")
+# Back matter re-contracted (author-directed, round-12 closeout): ORCID / per-cohort ethics-and-consent
+# enumeration / secondary-data-licence hedging were removed at the author's instruction, CRediT assigned,
+# funding set to none. The Ethics section now carries only a minimal factual statement (no fabricated
+# approval number, no exemption claim), so assert that form instead of the retired "exempt from review".
+ok("no institutional review board" not in text.lower() and "secondary analysis of de-identified release" in text
+   and "The authors declare no competing interests" in text and "no funds, grants" in text,
+   "ethics / competing-interests / funding statements not in the expected minimal factual form")
 ok("g2aging.org mirror is no longer an active distributor" in text or
    "no longer an active distributor" in text, "deprecated g2aging portal still routed as active")
 

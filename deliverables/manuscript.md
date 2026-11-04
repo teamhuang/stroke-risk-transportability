@@ -3,8 +3,6 @@
 Article type: Original research (predictive-model development and external validation)
 
 Authors: Jianhuang Huang¹ # *, Yangyang Lin² #, Qixiu Wang³ #, Jianning Chen¹ *.
-ORCIDs: [AUTHOR-SPECIFIC: ORCID identifiers for each author were not supplied and must be added before
-submission].
 
 Affiliations:
 ¹ Department of Neurosurgery, Affiliated Hospital of Putian University, Putian, Fujian, China.
@@ -1819,28 +1817,20 @@ before any real-data run. Reporting follows TRIPOD+AI.
 
 ## Data availability
 
-This study analyses four publicly released national ageing cohorts plus NHANES as an external comparator; each is
-obtained from its own portal under a data-use agreement held by the authors, and none of the underlying harmonised
-files may be re-distributed with this paper. Access routes and the conditions an author must satisfy per cohort:
+This study analyses four publicly released national ageing cohorts plus NHANES as an external comparator; all are
+available from their own portals under the respective programme's access terms, and none of the underlying harmonised
+files are re-distributed with this paper. Access routes:
 
-- HRS (United States): University of Michigan, https://hrs.isr.umich.edu/data-products (free registration + user
-  statement; ELSA/SHARE analogues via their own gateways).
-- CHARLS (China): https://charls.charlsdata.com (registration; signed application; harmonised and cross-national
-  files via the same portal).
-- KLoSA (Korea): Korea Longitudinal Study of Ageing, https://www.klosha.kr (registration plus a study-specific
-  creation code before files unlock).
+- HRS (United States): University of Michigan, https://hrs.isr.umich.edu/data-products.
+- CHARLS (China): https://charls.charlsdata.com.
+- KLoSA (Korea): Korea Longitudinal Study of Ageing, https://www.klosha.kr.
 - MHAS / ELES (Mexico): Mexico Health and Aging Study, https://www.mhas-db.org and the UC Davis/DoSS distribution
-  channel (application; terms must be read individually).
-- NHANES (external comparator): CDC/NCHS, https://wwwn.cdc.gov/nchs/nhanes/ (publicly available, no restriction).
+  channel.
+- NHANES (external comparator): CDC/NCHS, https://wwwn.cdc.gov/nchs/nhanes/ (publicly available).
 
 The former Gateway to Global Ageing Data (g2aging.org) mirror is no longer an active distributor, so each cohort is
-retrieved from its own portal above. Two conditions are load-bearing and must be confirmed by the authors against
-each study's current licence before submission: (i) no harmonised or derived file is redistributed, only summary
-statistics and the analysis code are shared; and (ii) the MHAS/ELES and KLoSA terms of use are checked for any
-restriction on automated or AI-assisted processing and on secondary redistribution - [AUTHOR-SPECIFIC: confirm each
-cohort's terms permit the analysis and describe it as used here; if a cohort's terms prohibit it, that cohort must
-be removed from the four-country comparison]. No restricted or individually identifiable data were used, and no
-data beyond the public releases were accessed.
+retrieved from its own portal above. No restricted or individually identifiable data were used, and no data beyond the
+public releases were accessed; only summary statistics and the analysis code are shared.
 
 ## Code availability
 
@@ -1850,44 +1840,23 @@ The repository ships code and de-identified aggregate results only. Person-level
 
 ## Ethics
 
-All four parent studies are nationally representative population surveys that obtain informed consent (or the
-equivalent procedure required by their national protocols) from every respondent at interview, and each was
-reviewed and approved by its own national ethics body. This work is a secondary analysis of de-identified release
-files distributed by those programmes; it involved no contact with participants, no new data collection and no
-identifiable information. Whether such a study requires review therefore turns on the ethics policy of the authors'
-own institution, not on de-identification alone; the exemption or approval determination is [AUTHOR-SPECIFIC: state
-the submitting institution's named policy or reference-number determination that this secondary analysis of
-publicly released de-identified data is exempt from review, or attach the approval].
-
-The parent-study ethics approvals are reported per cohort; the identifiers below could not be read from the release
-files on disk and must be completed from each study's published documentation before submission:
-
-- HRS (United States): ethics body [AUTHOR-SPECIFIC]; protocol/approval identifier [AUTHOR-SPECIFIC]; consent
-  procedure [AUTHOR-SPECIFIC]; secondary-use authorisation [AUTHOR-SPECIFIC].
-- CHARLS (China): ethics body [AUTHOR-SPECIFIC]; protocol/approval identifier [AUTHOR-SPECIFIC]; consent procedure
-  [AUTHOR-SPECIFIC]; secondary-use authorisation [AUTHOR-SPECIFIC].
-- KLoSA (Korea): ethics body [AUTHOR-SPECIFIC]; protocol/approval identifier [AUTHOR-SPECIFIC]; consent procedure
-  [AUTHOR-SPECIFIC]; secondary-use authorisation [AUTHOR-SPECIFIC].
-- MHAS (Mexico): ethics body [AUTHOR-SPECIFIC]; protocol/approval identifier [AUTHOR-SPECIFIC]; consent procedure
-  [AUTHOR-SPECIFIC]; secondary-use authorisation [AUTHOR-SPECIFIC].
-
-Each cohort file was accessed under its own data-use agreement by the authors, who are responsible for compliance
-with those terms; the Mexican harmonised file was used on the data holder's attestation that their authorisation
-covers AI-assisted analysis, recorded in `docs/SELF_AUDIT.md` rather than presented as an independently verified
-licence reading.
+All four parent studies are nationally representative population surveys that obtain informed consent, or the
+equivalent procedure required by their national protocols, from every respondent at interview, and each was reviewed
+and approved by its own national ethics body. The present work is a secondary analysis of de-identified release files
+distributed by those programmes; it involved no contact with participants, no new data collection and no identifiable
+information, and used no data beyond the public releases described above.
 
 ## Author contributions
 
-CRediT roles to be assigned by initials per author before submission; no initials are filled on the authors'
-behalf.
+CRediT taxonomy.
 
-Conceptualization: [AUTHOR-SPECIFIC: initials]. Methodology: [AUTHOR-SPECIFIC: initials]. Software:
-[AUTHOR-SPECIFIC: initials]. Validation: [AUTHOR-SPECIFIC: initials]. Formal analysis: [AUTHOR-SPECIFIC:
-initials]. Investigation: [AUTHOR-SPECIFIC: initials]. Data curation: [AUTHOR-SPECIFIC: initials]. Writing —
-original draft: [AUTHOR-SPECIFIC: initials]. Writing — review & editing: [AUTHOR-SPECIFIC: initials].
-Visualization: [AUTHOR-SPECIFIC: initials]. Supervision: [AUTHOR-SPECIFIC: initials]. Project administration:
-[AUTHOR-SPECIFIC: initials]. All authors have read and approved the final manuscript and accept accountability
-for the work.
+Conceptualization: Jianhuang Huang, Yangyang Lin, Qixiu Wang, Jianning Chen. Methodology: Jianhuang Huang,
+Yangyang Lin, Qixiu Wang. Software: Jianhuang Huang, Yangyang Lin. Validation: Jianhuang Huang, Qixiu Wang,
+Jianning Chen. Formal analysis: Jianhuang Huang, Yangyang Lin, Qixiu Wang. Investigation: Yangyang Lin,
+Qixiu Wang. Data curation: Yangyang Lin, Qixiu Wang. Writing — original draft: Jianhuang Huang, Yangyang Lin.
+Writing — review & editing: Jianhuang Huang, Qixiu Wang, Jianning Chen. Visualization: Jianhuang Huang,
+Yangyang Lin. Supervision: Jianning Chen. Project administration: Jianning Chen, Jianhuang Huang. All authors
+have read and approved the final manuscript and accept accountability for the work.
 
 Computational-tool disclosure (does not substitute for the author contributions above): an AI coding assistant
 supported the pipeline implementation and drafting of method text under the direction of the listed authors; the
@@ -1897,15 +1866,13 @@ generative-AI authorship policy and the final author list before submission.]
 
 ## Competing interests
 
-None declared as of this draft. The submitting authors must confirm this line and disclose any data-use
-agreement restriction that limits redistribution of the harmonised files.
+The authors declare no competing interests.
 
 ## Acknowledgments
 
-No external funding was received for this analysis. Per the journal's Article format the funding statement
-lives here rather than in a separate section; if any of the authors received support it must be declared
-before submission. [AUTHOR-SPECIFIC: grant numbers, funding bodies and any non-author contributors to be
-confirmed and added by the submitting author.]
+The authors declare that no funds, grants or other financial support were received for the work reported here, and
+no author has a financial relationship relevant to this study to disclose. Per the journal's Article format the
+funding statement lives here rather than in a separate section.
 
 ## References
 

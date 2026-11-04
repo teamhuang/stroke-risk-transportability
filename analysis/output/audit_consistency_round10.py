@@ -197,7 +197,7 @@ want = ["Study population and outcome ascertainment", "External transportability
 ok(got == want, f"Results ### not the six reviewer sections in order: {got}")
 meth = text[text.index("## Methods"):text.index("## Data availability")]
 ok(len([l for l in meth.split("\n") if l.startswith("### ")]) >= 12, "Methods lost its ### subheadings")
-ok(text.count("[AUTHOR-SPECIFIC") == 34, f"[AUTHOR-SPECIFIC] count is {text.count('[AUTHOR-SPECIFIC')}, expected 34 (author list/affiliations/corresponding supplied; ORCIDs + ethics/licence/CRediT/funding/code-DOI remain)")
+ok(text.count("[AUTHOR-SPECIFIC") == 2, f"[AUTHOR-SPECIFIC] count is {text.count('[AUTHOR-SPECIFIC')}, expected 2 (ORCID/ethics-consent/data-licence removed at author instruction; CRediT assigned; funding=none; only Zenodo code-DOI + AI-authorship-policy confirm remain)")
 ok("Authors:" in text and "Corresponding authors:" in text, "front-matter skeleton missing")
 ok("Jianhuang Huang" in text and "Jianning Chen" in text and "cjn2006@sohu.com" in text, "supplied author front matter not present")
 refs = text[text.index("## References"):]
@@ -219,4 +219,4 @@ print("PASS round-10: model identity unified (formal Table 3/4 + Methods + Figur
       "known-truth simulation, Figures S1-S8) with all method definitions in the main Methods; reference-4 corrected to 55-63/M14-0697/25560714; "
       "alpha_s,j exclusive probability + qualified one-piece claim; unified Korea footnote; China pooled-hazard "
       "reworded 'not reproduced'; percentile-range wording; pre-deployment positioning; analysis-plan heading; "
-      "six Results sections + Methods subheads + 36 author placeholders + refs 1..15 intact.")
+      "six Results sections + Methods subheads + 2 remaining author-only items (code-DOI, AI-policy) + refs 1..15 intact.")

@@ -114,9 +114,10 @@ ok(len([l for l in meth.split("\n") if l.startswith("### ")]) >= 12, "Methods lo
 ok("Authors:" in text and ("Corresponding authors:" in text or "Corresponding author:" in text) and "Affiliations:" in text,
    "front-matter author/affiliation/corresponding skeleton missing")
 
-# ===== author-only placeholders must remain (never invented) =====
-ok("[AUTHOR-SPECIFIC" in text and "Conceptualization:" in text and "exempt from review" in text,
-   "author-only placeholders / CRediT / IRB determination must be intact")
+# ===== author-only placeholders / CRediT / clean back-matter must remain =====
+ok("[AUTHOR-SPECIFIC" in text and "Conceptualization:" in text
+   and "secondary analysis of de-identified release" in text and "The authors declare no competing interests" in text,
+   "author placeholders / CRediT / minimal ethics / competing-interests must be intact")
 
 # ===== carried-forward: corrected identity, nonparametric rename, tables 18/20, 2D, flow, refs =====
 ok("p_s·p_d = (p_s − α_s) + (p_d − α_d)" in text, "corrected competing-risk identity missing")

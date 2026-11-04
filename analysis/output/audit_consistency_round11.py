@@ -77,7 +77,7 @@ for held, val in [("MX", 2.975), ("CN", 0.802), ("KR", 1.147), ("US", 0.897)]:
 ok("3.004" in text, "V4 shipped Mexico P/O 3.004 (sensitivity) missing")
 
 # ---------- author-only placeholders intact ----------
-ok(text.count("[AUTHOR-SPECIFIC") == 34, f"[AUTHOR-SPECIFIC] count {text.count('[AUTHOR-SPECIFIC')} != 34")
+ok(text.count("[AUTHOR-SPECIFIC") == 2, f"[AUTHOR-SPECIFIC] count {text.count('[AUTHOR-SPECIFIC')} != 2 (only code-DOI + AI-policy remain after author-directed back-matter cleanup)")
 ok("Jianhuang Huang" in text and "cjn2006@sohu.com" in text, "supplied authors missing")
 # references 1..15
 refs = text[text.index("## References"):]
@@ -89,5 +89,5 @@ if fails:
     sys.exit(1)
 print(f"ran {len(checks)} assertions")
 print("PASS round-11: tables 1..22 (no gaps/no 'b') all at the end; figures 1-6 + SI S1-S9/S1-S8; SI reduced to "
-      "tables+figures with methods in main; code availability = repo pointer; P0-2/3/4 + P1-1/2/3/4/5/6/7 present; "
-      "bold only on captions; joint P/O 0.802/1.147/2.975/0.897 + V4 3.004 preserved; 34 author placeholders; refs 1..15.")
+      "tables+figures with methods in main; code availability = published repo URL + tag v1.0.0; P0-2/3/4 + P1-1/2/3/4/5/6/7 present; "
+      "bold only on captions; joint P/O 0.802/1.147/2.975/0.897 + V4 3.004 preserved; 2 remaining author-only items; refs 1..15.")
