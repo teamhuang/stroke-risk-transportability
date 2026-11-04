@@ -24,10 +24,12 @@ ok(sorted(set(si_embeds)) == [f"S{i}" for i in range(1, 9)], f"SI figure embeds:
 for p in re.findall(r'\]\((figures/incident/[^)]+\.png)\)', text + supp):
     ok(os.path.exists(os.path.join(DEL, p.replace("/", os.sep))), f"embedded image missing on disk: {p}")
 
-# ---------- P0-3 / P1-9 : code availability honest ----------
-ok("prepared as one versioned, citable repository" in text, "code availability not softened to 'prepared'")
+# ---------- P0-3 / P1-9 : code availability honest (now actually published) ----------
+ok("released as one versioned, citable repository at https://github.com/teamhuang/stroke-risk-transportability" in text,
+   "code availability does not state the real published repository URL")
+ok("frozen release tag v1.0.0" in text, "code availability missing the frozen release tag v1.0.0")
 ok("cannot drift apart" not in text, "absolute 'cannot drift apart' overclaim remains")
-ok("[AUTHOR-SPECIFIC" in text[text.index("## Code availability"):text.index("## Ethics")], "repo placeholder must remain")
+ok("[AUTHOR-SPECIFIC" in text[text.index("## Code availability"):text.index("## Ethics")], "Zenodo-DOI placeholder must remain (author-issued)")
 
 # ---------- P0-4 / P1-1 ----------
 ok("survey-ascertainable probability of a first reported stroke" in text, "P0-4 estimand lead missing")

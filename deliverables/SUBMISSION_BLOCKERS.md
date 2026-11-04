@@ -183,8 +183,10 @@ These are facts the analysis cannot produce and must NEVER be invented by it. Ea
 - Data-use terms: confirm each cohort's licence permits automated/AI-assisted processing and describes this analysis
   as used; if a cohort's terms prohibit it, that cohort must be removed from the four-country comparison (KLoSA needs
   registration + a study creation code; MHAS/ELES terms must be read individually).
-- Code availability: the release repository URL, version tag and archived version DOI (e.g. Zenodo) for the versioned
-  snapshot; nothing here should be filled with a placeholder DOI.
+- Code availability: the versioned repository is published at https://github.com/teamhuang/stroke-risk-transportability
+  (frozen release tag v1.0.0) — code + de-identified aggregate results + figures, no person-level data. STILL OUTSTANDING:
+  connect release v1.0.0 to Zenodo and publish to mint the archived version DOI; nothing here should be filled with a
+  placeholder DOI.
 - Author contributions: CRediT roles assigned by author initials; approval of the final version; accountability.
 - Competing interests and funding: all-author confirmation; declare any grant numbers and any data-use restriction
   limiting redistribution of harmonised files.

@@ -316,5 +316,16 @@ python make_figures.py           # 16 panels -> output/figures/
 #     analysis/output/audit_consistency_round6-10.py remapped to the new table numbering; NEW
 #     audit_consistency_round11.py (81) verifies the restructure. All six gates PASS; manuscript_round11.docx and
 #     Supplementary_Information_round11.docx rebuilt and validated.
-#     Repository: the reproduction code is to be deposited at https://github.com/<org>/<repository> under a
-#         version tag with an archived DOI (author-issued; the Code availability placeholder is intentionally unfilled).
+#   ROUND 12 (GitHub frozen-repository publication):
+#     The reproduction code is PUBLISHED at https://github.com/teamhuang/stroke-risk-transportability (frozen release
+#         tag v1.0.0). Assembled by _round12_build_repo.py, which copies code + de-identified aggregate results +
+#         figures + manuscript/SI/READMEs and DROPS every person-level file (personperiod_*, hrs_times.csv, the 74 MB
+#         incident_personperiod_pooled_*.csv and the person-level leakage_audit CSV) by header id-column scan; the
+#         aggregate incident working layer that audit gates round6-11 read is shipped so all seven gates PASS
+#         self-contained from the package (132 MB, 405 files, largest object 13.87 MB). .gitignore re-excludes
+#         person-level files on any local re-run. manuscript.md Code availability updated to the real URL + v1.0.0
+#         (Zenodo DOI remains [AUTHOR-SPECIFIC] until the authors connect the release and publish it); SUBMISSION_
+#         BLOCKERS updated; round12 gate re-contracted to assert the published URL/tag (45 assertions). A top-level
+#         README.md (scope / environment / layout / how to run the gates / reproduce-from-source / data policy /
+#         author-only items) and pinned requirements.txt are written into the repo. The archived Zenodo DOI is still
+#         author-issued and intentionally unfilled.
