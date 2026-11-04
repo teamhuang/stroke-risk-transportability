@@ -1,0 +1,26 @@
+Characteristic,China (CHARLS),Korea (KLoSA),Mexico (MHAS),United States (NHANES),Pooled (all countries)
+rows (respondent-waves),71694,65494,91709,18191,247088
+adults,24458,11115,27092,18191,80856
+waves per adult,2.93,5.89,3.39,1.0,3.06
+prevalent strokes,3123,859,3415,784,8181
+"stroke prevalence, %",4.36,1.31,3.72,4.31,3.31
+"age, mean (sd)",60.15 (10.27),66.63 (10.81),63.96 (11.11),51.17 (17.88),62.62 (12.13)
+"income_pir, mean (sd)",-0.01 (1.00),not observed,0.00 (1.00),0.00 (1.00),-0.00 (1.00)
+"bmi, mean (sd)",23.72 (3.91),23.26 (2.74),28.20 (5.24),29.71 (7.25),24.47 (4.66)
+"female, % of observed",52.5,57.6,58.0,53.2,55.9
+"education low, % of observed",87.8,60.8,86.0,8.0,74.3
+"education upper-secondary, % of observed",10.1,28.1,3.0,33.0,13.8
+"education tertiary, % of observed",2.0,11.0,11.0,59.0,11.9
+"partnered, % of observed",86.4,75.9,69.1,56.7,75.0
+"ever_smoker, % of observed",42.0,15.1,38.7,41.4,33.6
+"current_smoker, % of observed",25.9,12.8,13.0,17.1,16.8
+"alcohol, % of observed",33.8,34.8,26.2,65.6,33.6
+"hypertension, % of observed",31.6,10.8,51.6,36.7,35.9
+"high_cholesterol, % of observed",,,,35.9,35.9
+"diabetes, % of observed",9.1,4.1,23.9,14.6,14.1
+"heart_attack, % of observed",15.9,1.8,5.7,4.3,7.6
+"bmi missing, %",45.1,2.0,92.7,13.4,49.0
+"income_pir missing, %",42.1,100.0,7.2,14.3,42.4
+"high_cholesterol missing, %",100.0,100.0,100.0,0.7,92.7
+"education missing, %",0.0,4.9,1.1,0.2,1.7
+"marital missing, %",0.0,15.6,0.0,0.2,4.1

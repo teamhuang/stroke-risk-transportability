@@ -1,0 +1,215 @@
+{
+  "generated_from": "incident_cr_exact.py",
+  "horizon_years": 4.0,
+  "reps": 40,
+  "boot": 500,
+  "fractions": [
+    0.02,
+    0.05,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "variant": "V4_ph_competing",
+  "checks": [
+    {
+      "name": "V4 recomposition reproduces the published primary frozen rows (so only the composition differs, not the estimation)",
+      "n_cells": 4,
+      "n_mismatches": 0,
+      "detail": []
+    },
+    {
+      "name": "duration consistency of the step ladder (ratio of 8-step to 1-step risk)",
+      "by_arm": {
+        "V4_shipped_product": [
+          1.0,
+          0.942396945
+        ],
+        "V5_exact_exclusive": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "adaptation/evaluation person overlap",
+      "overlap_total": 0,
+      "rows_audited": 2400
+    }
+  ],
+  "diagnostics": {
+    "cif_mid|CN": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.008654403159059514,
+      "mean_p_d_step": 0.02740240309405613,
+      "mean_exclusivity_term_p_s_p_d": 0.0005263886970210017,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000526388697021,
+      "V4_mean_pred": 0.017126,
+      "V5_mean_pred": 0.016597,
+      "rel_change_pct": -3.089,
+      "V4_pred_over_obs": 0.7935,
+      "V5_pred_over_obs": 0.769,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_mid|KR": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.010792314154211302,
+      "mean_p_d_step": 0.033778850885600765,
+      "mean_exclusivity_term_p_s_p_d": 0.0006937573865387297,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0006937573865387,
+      "V4_mean_pred": 0.021175,
+      "V5_mean_pred": 0.020465,
+      "rel_change_pct": -3.352,
+      "V4_pred_over_obs": 1.1338,
+      "V5_pred_over_obs": 1.0958,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_mid|MX": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.014572956164761572,
+      "mean_p_d_step": 0.023835482800883243,
+      "mean_exclusivity_term_p_s_p_d": 0.000755717356546289,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0007557173565462,
+      "V4_mean_pred": 0.028526,
+      "V5_mean_pred": 0.027783,
+      "rel_change_pct": -2.607,
+      "V4_pred_over_obs": 3.0041,
+      "V5_pred_over_obs": 2.9258,
+      "repair_V5_gain_at_05": 0.003291203943695471
+    },
+    "cif_mid|US": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.011349649879058687,
+      "mean_p_d_step": 0.02596441844201914,
+      "mean_exclusivity_term_p_s_p_d": 0.0006076190729749795,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000607619072975,
+      "V4_mean_pred": 0.02215,
+      "V5_mean_pred": 0.021565,
+      "rel_change_pct": -2.644,
+      "V4_pred_over_obs": 0.8799,
+      "V5_pred_over_obs": 0.8566,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_start|CN": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.008654403159059514,
+      "mean_p_d_step": 0.02740240309405613,
+      "mean_exclusivity_term_p_s_p_d": 0.0005263886970210017,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000526388697021,
+      "V4_mean_pred": 0.017121,
+      "V5_mean_pred": 0.016592,
+      "rel_change_pct": -3.089,
+      "V4_pred_over_obs": 0.3102,
+      "V5_pred_over_obs": 0.3006,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_start|KR": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.010792314154211302,
+      "mean_p_d_step": 0.033778850885600765,
+      "mean_exclusivity_term_p_s_p_d": 0.0006937573865387297,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0006937573865387,
+      "V4_mean_pred": 0.021172,
+      "V5_mean_pred": 0.020462,
+      "rel_change_pct": -3.352,
+      "V4_pred_over_obs": 0.8799,
+      "V5_pred_over_obs": 0.8504,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_start|MX": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.014572956164761572,
+      "mean_p_d_step": 0.023835482800883243,
+      "mean_exclusivity_term_p_s_p_d": 0.000755717356546289,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0007557173565462,
+      "V4_mean_pred": 0.028519,
+      "V5_mean_pred": 0.027776,
+      "rel_change_pct": -2.607,
+      "V4_pred_over_obs": 1.2333,
+      "V5_pred_over_obs": 1.2012,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_start|US": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.011349649879058687,
+      "mean_p_d_step": 0.02596441844201914,
+      "mean_exclusivity_term_p_s_p_d": 0.0006076190729749795,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000607619072975,
+      "V4_mean_pred": 0.022141,
+      "V5_mean_pred": 0.021556,
+      "rel_change_pct": -2.642,
+      "V4_pred_over_obs": 0.7123,
+      "V5_pred_over_obs": 0.6935,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_end|CN": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.008654403159059514,
+      "mean_p_d_step": 0.02740240309405613,
+      "mean_exclusivity_term_p_s_p_d": 0.0005263886970210017,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000526388697021,
+      "V4_mean_pred": 0.017132,
+      "V5_mean_pred": 0.016602,
+      "rel_change_pct": -3.091,
+      "V4_pred_over_obs": 1.1974,
+      "V5_pred_over_obs": 1.1604,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_end|KR": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.010792314154211302,
+      "mean_p_d_step": 0.033778850885600765,
+      "mean_exclusivity_term_p_s_p_d": 0.0006937573865387297,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0006937573865387,
+      "V4_mean_pred": 0.021182,
+      "V5_mean_pred": 0.020472,
+      "rel_change_pct": -3.353,
+      "V4_pred_over_obs": 1.3683,
+      "V5_pred_over_obs": 1.3224,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_end|MX": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.014572956164761572,
+      "mean_p_d_step": 0.023835482800883243,
+      "mean_exclusivity_term_p_s_p_d": 0.000755717356546289,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.0007557173565462,
+      "V4_mean_pred": 0.028528,
+      "V5_mean_pred": 0.027784,
+      "rel_change_pct": -2.607,
+      "V4_pred_over_obs": 2.9694,
+      "V5_pred_over_obs": 2.892,
+      "repair_V5_gain_at_05": null
+    },
+    "cif_end|US": {
+      "step_years": 2.0,
+      "mean_p_s_step": 0.011349649879058687,
+      "mean_p_d_step": 0.02596441844201914,
+      "mean_exclusivity_term_p_s_p_d": 0.0006076190729749795,
+      "survival_product_vs_exact_gap": 1.1102230246251565e-16,
+      "prob_mass_p_plus_q_plus_S": 1.000607619072975,
+      "V4_mean_pred": 0.02216,
+      "V5_mean_pred": 0.021573,
+      "rel_change_pct": -2.645,
+      "V4_pred_over_obs": 1.3267,
+      "V5_pred_over_obs": 1.2916,
+      "repair_V5_gain_at_05": null
+    }
+  },
+  "algebra": {
+    "survival_factor": "(1-p_s)(1-p_d) = exp(-(lambda_s+lambda_d)D): correct for the probability that NEITHER event occurs, under independent latent times. NOT the same as 1-p_s-p_d, which would be right only if the two marginal event probabilities were mutually exclusive.",
+    "event_factor": "p_s = 1-exp(-lambda_s D) is the probability that A STROKE occurs in the step; the probability that the FIRST event is a stroke is lambda_s/(lambda_s+lambda_d)*(1-exp(-(lambda_s+lambda_d)D)); the difference is p_s*p_d, the both-events-in-one-step case counted twice.",
+    "consequence": "the shipped composition assigns total step probability 1 + p_s*p_d > 1; V5 assigns exactly 1."
+  }
+}

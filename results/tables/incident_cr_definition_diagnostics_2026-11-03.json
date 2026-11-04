@@ -1,0 +1,522 @@
+{
+  "generated_from": "incident_cr_definition.py",
+  "horizon_years": 4.0,
+  "horizon_rule": "cif_mid",
+  "reps": 20,
+  "boot": 200,
+  "fractions": [
+    0.02,
+    0.05
+  ],
+  "feature_columns": {
+    "common": [
+      "age",
+      "ever_smoker",
+      "current_smoker",
+      "alcohol",
+      "hypertension",
+      "diabetes",
+      "heart_attack",
+      "sex_2",
+      "education_2",
+      "education_3",
+      "education_4",
+      "education_5",
+      "marital_2",
+      "marital_3",
+      "marital_4",
+      "marital_5",
+      "marital_6",
+      "exposure_years",
+      "t_since_entry_years"
+    ],
+    "core": [
+      "age",
+      "ever_smoker",
+      "current_smoker",
+      "hypertension",
+      "diabetes",
+      "sex_2",
+      "education_2",
+      "education_3",
+      "education_4",
+      "education_5",
+      "marital_2",
+      "marital_3",
+      "marital_4",
+      "marital_5",
+      "marital_6",
+      "exposure_years",
+      "t_since_entry_years"
+    ],
+    "core_strict": [
+      "age",
+      "ever_smoker",
+      "current_smoker",
+      "diabetes",
+      "sex_2",
+      "education_2",
+      "education_3",
+      "education_4",
+      "education_5",
+      "exposure_years",
+      "t_since_entry_years"
+    ]
+  },
+  "definition_drops": {
+    "core": [
+      "heart_attack",
+      "alcohol"
+    ],
+    "core_strict": [
+      "heart_attack",
+      "alcohol",
+      "hypertension",
+      "marital"
+    ]
+  },
+  "per_panel_missingness_pct": {
+    "CHARLS": {
+      "age": 0.0,
+      "sex": 0.0,
+      "education": 0.0,
+      "marital": 0.0,
+      "ever_smoker": 0.08,
+      "current_smoker": 8.03,
+      "alcohol": 0.16,
+      "hypertension": 1.03,
+      "diabetes": 1.32,
+      "heart_attack": 0.73
+    },
+    "HRS": {
+      "age": 0.0,
+      "sex": 0.0,
+      "education": 0.02,
+      "marital": 0.1,
+      "ever_smoker": 0.7,
+      "current_smoker": 0.55,
+      "alcohol": 0.03,
+      "hypertension": 0.0,
+      "diabetes": 0.0,
+      "heart_attack": 0.0
+    },
+    "KLoSA": {
+      "age": 0.0,
+      "sex": 0.0,
+      "education": 4.24,
+      "marital": 16.05,
+      "ever_smoker": 0.0,
+      "current_smoker": 0.0,
+      "alcohol": 0.0,
+      "hypertension": 29.09,
+      "diabetes": 12.34,
+      "heart_attack": 5.49
+    },
+    "MHAS": {
+      "age": 0.0,
+      "sex": 0.0,
+      "education": 0.79,
+      "marital": 0.0,
+      "ever_smoker": 0.07,
+      "current_smoker": 0.08,
+      "alcohol": 0.04,
+      "hypertension": 0.18,
+      "diabetes": 0.18,
+      "heart_attack": 0.08
+    }
+  },
+  "checks": [
+    {
+      "name": "common tier reproduces the published primary frozen rows",
+      "n_cells": 8,
+      "n_mismatches": 0,
+      "detail": []
+    }
+  ],
+  "diagnostics": {
+    "common|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.01629,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.755,
+      "ci_pred_over_obs": [
+        0.692,
+        0.824
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.0002,
+        "0.05": -0.000262
+      }
+    },
+    "common|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.01713,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7935,
+      "ci_pred_over_obs": [
+        0.727,
+        0.866
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000159,
+        "0.05": -0.000228
+      }
+    },
+    "common|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.02176,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1649,
+      "ci_pred_over_obs": [
+        1.001,
+        1.361
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.00038,
+        "0.05": -0.000479
+      }
+    },
+    "common|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.02118,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1338,
+      "ci_pred_over_obs": [
+        0.974,
+        1.327
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000244,
+        "0.05": -0.000333
+      }
+    },
+    "common|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.03036,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.1969,
+      "ci_pred_over_obs": [
+        2.796,
+        3.666
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.004288,
+        "0.05": 0.004368
+      }
+    },
+    "common|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.02853,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.0041,
+      "ci_pred_over_obs": [
+        2.628,
+        3.445
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.003541,
+        "0.05": 0.003655
+      }
+    },
+    "common|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.02477,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.9839,
+      "ci_pred_over_obs": [
+        0.94,
+        1.039
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000213,
+        "0.05": 2.3e-05
+      }
+    },
+    "common|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 19,
+      "mean_pred": 0.02215,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.8799,
+      "ci_pred_over_obs": [
+        0.84,
+        0.93
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.000151,
+        "0.05": 0.000409
+      }
+    },
+    "core|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.01527,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7073,
+      "ci_pred_over_obs": [
+        0.648,
+        0.771
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000336,
+        "0.05": -0.000339
+      }
+    },
+    "core|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.01624,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7526,
+      "ci_pred_over_obs": [
+        0.69,
+        0.821
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000326,
+        "0.05": -0.000353
+      }
+    },
+    "core|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.02277,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.219,
+      "ci_pred_over_obs": [
+        1.044,
+        1.424
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.00069,
+        "0.05": -0.000653
+      }
+    },
+    "core|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.02234,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1964,
+      "ci_pred_over_obs": [
+        1.027,
+        1.399
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000832,
+        "0.05": -0.000768
+      }
+    },
+    "core|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.03195,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.3651,
+      "ci_pred_over_obs": [
+        2.938,
+        3.861
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.005138,
+        "0.05": 0.005189
+      }
+    },
+    "core|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.03011,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.1705,
+      "ci_pred_over_obs": [
+        2.768,
+        3.639
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.004458,
+        "0.05": 0.004543
+      }
+    },
+    "core|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.02284,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.9074,
+      "ci_pred_over_obs": [
+        0.868,
+        0.961
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 2.1e-05,
+        "0.05": 0.000405
+      }
+    },
+    "core|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 17,
+      "mean_pred": 0.02042,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.811,
+      "ci_pred_over_obs": [
+        0.775,
+        0.859
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.000417,
+        "0.05": 0.00083
+      }
+    },
+    "core_strict|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.01581,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7327,
+      "ci_pred_over_obs": [
+        0.67,
+        0.801
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000607,
+        "0.05": -0.000636
+      }
+    },
+    "core_strict|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.01693,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7846,
+      "ci_pred_over_obs": [
+        0.718,
+        0.857
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000625,
+        "0.05": -0.000686
+      }
+    },
+    "core_strict|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.02425,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.2982,
+      "ci_pred_over_obs": [
+        1.117,
+        1.513
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000498,
+        "0.05": -0.000451
+      }
+    },
+    "core_strict|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.02386,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.2774,
+      "ci_pred_over_obs": [
+        1.1,
+        1.488
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": -0.000516,
+        "0.05": -0.0005
+      }
+    },
+    "core_strict|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.03085,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.2486,
+      "ci_pred_over_obs": [
+        2.839,
+        3.733
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.004639,
+        "0.05": 0.004644
+      }
+    },
+    "core_strict|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.0295,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.1063,
+      "ci_pred_over_obs": [
+        2.715,
+        3.57
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.004276,
+        "0.05": 0.0043
+      }
+    },
+    "core_strict|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.02123,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.8434,
+      "ci_pred_over_obs": [
+        0.804,
+        0.894
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.000615,
+        "0.05": 0.001074
+      }
+    },
+    "core_strict|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_features": 11,
+      "mean_pred": 0.01904,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.7562,
+      "ci_pred_over_obs": [
+        0.721,
+        0.801
+      ],
+      "repair_mean_gain_by_frac": {
+        "0.02": 0.000863,
+        "0.05": 0.001304
+      }
+    }
+  }
+}

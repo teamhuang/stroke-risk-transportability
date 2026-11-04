@@ -1,0 +1,11 @@
+Unnamed: 0,CHARLS,HRS,KLoSA,MHAS
+age,0.0,0.0,0.0,0.0
+sex,0.0,0.0,0.0,0.0
+education,0.0,0.02,4.24,0.79
+marital,0.0,0.1,16.05,0.0
+ever_smoker,0.08,0.7,0.0,0.07
+current_smoker,8.03,0.55,0.0,0.08
+alcohol,0.16,0.03,0.0,0.04
+hypertension,1.03,0.0,29.09,0.18
+diabetes,1.32,0.0,12.34,0.18
+heart_attack,0.73,0.0,5.49,0.08

@@ -1,0 +1,54 @@
+{
+ "horizon": 4.0,
+ "horizon_rule": "cif_mid",
+ "features": "common",
+ "time_mode": "linear",
+ "n_boot": 500,
+ "models": [
+  "logistic",
+  "random_forest"
+ ],
+ "cells": 142,
+ "cells_interpretable": 120,
+ "interpretable_rule": "events >= 10 and n >= 100",
+ "cells_skipped_below_50": 4,
+ "skipped_detail": [
+  {
+   "held": "MX",
+   "model": "logistic",
+   "stratum": "hypertension",
+   "level": "unknown",
+   "n": 5
+  },
+  {
+   "held": "MX",
+   "model": "random_forest",
+   "stratum": "hypertension",
+   "level": "unknown",
+   "n": 5
+  },
+  {
+   "held": "US",
+   "model": "logistic",
+   "stratum": "education",
+   "level": "unknown",
+   "n": 19
+  },
+  {
+   "held": "US",
+   "model": "random_forest",
+   "stratum": "education",
+   "level": "unknown",
+   "n": 19
+  }
+ ],
+ "cells_without_discrimination": 0,
+ "min_cell_events_for_auroc": 1,
+ "min_cell_n_for_auroc": 80,
+ "frame_counts": {
+  "evaluable": 85741,
+  "event_within_horizon": 1845,
+  "stroke_free_through_horizon": 79228,
+  "lost_before_horizon_excluded": 8264
+ }
+}

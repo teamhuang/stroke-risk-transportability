@@ -1,0 +1,135 @@
+{
+ "wave1": {
+  "iwstat_counts": {
+   "0": 32337,
+   "1": 12652,
+   "4": 245
+  },
+  "interviewed": 12652,
+  "wtresp_zero": 2858,
+  "wtresp_zero_pct_of_interviewed": 0.2259,
+  "wtresp_null": 0,
+  "hh_weight_present_at_zeros": 2658,
+  "hh_weight_positive_overall": 12452,
+  "wtresp_sum_over_interviewed": 24532549.0,
+  "age_at_zeros": {
+   "median": 50.0,
+   "min": 23,
+   "max": 85
+  },
+  "mean_age_interviewed": 55.3
+ },
+ "wave2": {
+  "iwstat_counts": {
+   "0": 24043,
+   "1": 19642,
+   "4": 1300,
+   "5": 226,
+   "7": 23
+  },
+  "interviewed": 19642,
+  "wtresp_zero": 3258,
+  "wtresp_zero_pct_of_interviewed": 0.1659,
+  "wtresp_null": 0,
+  "hh_weight_present_at_zeros": 3089,
+  "hh_weight_positive_overall": 19473,
+  "wtresp_sum_over_interviewed": 46083586.0,
+  "age_at_zeros": {
+   "median": 63.0,
+   "min": 25,
+   "max": 84
+  },
+  "mean_age_interviewed": 65.1
+ },
+ "wave3": {
+  "iwstat_counts": {
+   "0": 23896,
+   "1": 17991,
+   "4": 2001,
+   "5": 1088,
+   "6": 226,
+   "7": 32
+  },
+  "interviewed": 17991,
+  "wtresp_zero": 3443,
+  "wtresp_zero_pct_of_interviewed": 0.1914,
+  "wtresp_null": 0,
+  "hh_weight_present_at_zeros": 2910,
+  "hh_weight_positive_overall": 17458,
+  "wtresp_sum_over_interviewed": 42598902.0,
+  "age_at_zeros": {
+   "median": 66.0,
+   "min": 25,
+   "max": 102
+  },
+  "mean_age_interviewed": 66.4
+ },
+ "wave8": {
+  "iwstat_counts": {
+   "1": 18469,
+   "0": 14765,
+   "6": 6925,
+   "4": 2196,
+   "7": 1495,
+   "5": 1384
+  },
+  "interviewed": 18469,
+  "wtresp_zero": 1363,
+  "wtresp_zero_pct_of_interviewed": 0.0738,
+  "wtresp_null": 0,
+  "hh_weight_present_at_zeros": 865,
+  "hh_weight_positive_overall": 17971,
+  "wtresp_sum_over_interviewed": 76725316.0,
+  "age_at_zeros": {
+   "median": 51.0,
+   "min": 25,
+   "max": 102
+  },
+  "mean_age_interviewed": 68.0
+ },
+ "wave13": {
+  "iwstat_counts": {
+   "1": 20912,
+   "6": 13757,
+   "4": 3340,
+   "0": 3012,
+   "7": 2733,
+   "5": 1480
+  },
+  "interviewed": 20912,
+  "wtresp_zero": 1289,
+  "wtresp_zero_pct_of_interviewed": 0.0616,
+  "wtresp_null": 0,
+  "hh_weight_present_at_zeros": 962,
+  "hh_weight_positive_overall": 20585,
+  "wtresp_sum_over_interviewed": 108444509.0,
+  "age_at_zeros": {
+   "median": 49.0,
+   "min": 21,
+   "max": 103
+  },
+  "mean_age_interviewed": 65.7
+ },
+ "wave16": {
+  "iwstat_counts": {
+   "6": 17905,
+   "1": 15856,
+   "4": 5748,
+   "7": 4343,
+   "5": 1382
+  },
+  "interviewed": 15856,
+  "wtresp_zero": 869,
+  "wtresp_zero_pct_of_interviewed": 0.0548,
+  "wtresp_null": 2728,
+  "hh_weight_present_at_zeros": 580,
+  "hh_weight_positive_overall": 12839,
+  "wtresp_sum_over_interviewed": 92359135.0,
+  "age_at_zeros": {
+   "median": 54.0,
+   "min": 27,
+   "max": 100
+  },
+  "mean_age_interviewed": 67.7
+ }
+}

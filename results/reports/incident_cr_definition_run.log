@@ -1,0 +1,48 @@
+share of interval rows MISSING (%), the measured basis for each ablation tier:
+cohort          CHARLS   HRS  KLoSA  MHAS
+age               0.00  0.00   0.00  0.00
+sex               0.00  0.00   0.00  0.00
+education         0.00  0.02   4.24  0.79
+marital           0.00  0.10  16.05  0.00
+ever_smoker       0.08  0.70   0.00  0.07
+current_smoker    8.03  0.55   0.00  0.08
+alcohol           0.16  0.03   0.00  0.04
+hypertension      1.03  0.00  29.09  0.18
+diabetes          1.32  0.00  12.34  0.18
+heart_attack      0.73  0.00   5.49  0.08
+
+horizon frame (cif_mid): {"horizon_rule": "cif_mid", "persons_total": 94005, "event_within_horizon": 1845, "death_within_horizon_no_stroke": 4668, "death_counted_as_non_event": 4668, "death_excluded_from_frame": 0, "lost_before_horizon_excluded": 8264, "stroke_free_through_horizon": 79228, "evaluable": 85741, "observed_prevalence_unweighted": 0.021518293465203345, "observed_prevalence_ipcw": 0.020154189026142872, "median_ipcw_weight": 1.1018982377425588, "max_ipcw_weight": 1.1018982377425588}
+
+########## feature set 'common': 19 columns (0 fewer than the published primary arm)
+  fitted CN V1_logit_cause_specific: stroke conv=True it=23 | death conv=True it=21
+  fitted CN V4_ph_competing: stroke conv=True it=22 | death conv=True it=20
+  fitted KR V1_logit_cause_specific: stroke conv=True it=21 | death conv=True it=21
+  fitted KR V4_ph_competing: stroke conv=True it=22 | death conv=True it=20
+  fitted MX V1_logit_cause_specific: stroke conv=True it=21 | death conv=True it=22
+  fitted MX V4_ph_competing: stroke conv=True it=22 | death conv=True it=22
+  fitted US V1_logit_cause_specific: stroke conv=True it=22 | death conv=True it=23
+  fitted US V4_ph_competing: stroke conv=True it=23 | death conv=True it=25
+
+########## feature set 'core': 17 columns (2 fewer than the published primary arm)
+  fitted CN V1_logit_cause_specific: stroke conv=True it=21 | death conv=True it=21
+  fitted CN V4_ph_competing: stroke conv=True it=22 | death conv=True it=21
+  fitted KR V1_logit_cause_specific: stroke conv=True it=20 | death conv=True it=20
+  fitted KR V4_ph_competing: stroke conv=True it=21 | death conv=True it=19
+  fitted MX V1_logit_cause_specific: stroke conv=True it=21 | death conv=True it=22
+  fitted MX V4_ph_competing: stroke conv=True it=21 | death conv=True it=22
+  fitted US V1_logit_cause_specific: stroke conv=True it=20 | death conv=True it=23
+  fitted US V4_ph_competing: stroke conv=True it=21 | death conv=True it=25
+
+########## feature set 'core_strict': 11 columns (8 fewer than the published primary arm)
+  fitted CN V1_logit_cause_specific: stroke conv=True it=20 | death conv=True it=18
+  fitted CN V4_ph_competing: stroke conv=True it=20 | death conv=True it=20
+  fitted KR V1_logit_cause_specific: stroke conv=True it=20 | death conv=True it=19
+  fitted KR V4_ph_competing: stroke conv=True it=21 | death conv=True it=19
+  fitted MX V1_logit_cause_specific: stroke conv=True it=19 | death conv=True it=20
+  fitted MX V4_ph_competing: stroke conv=True it=20 | death conv=True it=20
+  fitted US V1_logit_cause_specific: stroke conv=True it=19 | death conv=True it=23
+  fitted US V4_ph_competing: stroke conv=True it=21 | death conv=True it=25
+
+REPLICATION CHECK (common tier vs published primary): 8 cells, 0 mismatches -> PASS
+
+wrote 1920 rows, 48 paired rows, diagnostics + missingness to H:\脑出血国际队列\data\processed\intl\incident

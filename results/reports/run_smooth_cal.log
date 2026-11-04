@@ -1,0 +1,4 @@
+smooth calibration | rule=cif_mid boot=200 frac=0.05 splits=120
+MX: a_bar=-1.276; frozen high-risk tail at predicted 0.130 -> observed 0.065 [0.014, 0.178]
+wrote incident_calibration_smooth.{png,pdf} + csv rows=480
+EXIT=0

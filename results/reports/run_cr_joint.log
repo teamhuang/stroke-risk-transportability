@@ -1,0 +1,27 @@
+module self-test: gradient rel error 1.46e-09, interval-probability mass deviation 1.11e-16
+rows where both flags are set: 0 (must be 0)
+  CN: joint conv=True it=43 nll=109082.97
+  KR: joint conv=True it=43 nll=116284.39
+  MX: joint conv=True it=42 nll=92670.85
+  US: joint conv=True it=55 nll=44597.39
+
+########## timing convention: cif_mid
+  CN: joint P/O 0.8019 [1.000000000000 ladder] vs shipped 0.7935 (+1.06% predicted mass)
+  KR: joint P/O 1.1473 [1.000000000000 ladder] vs shipped 1.1338 (+1.19% predicted mass)
+  MX: joint P/O 2.9753 [1.000000000000 ladder] vs shipped 3.0041 (-0.96% predicted mass)
+  US: joint P/O 0.8966 [1.000000000000 ladder] vs shipped 0.8799 (+1.90% predicted mass)
+
+########## timing convention: cif_start
+  CN: joint P/O 0.3135 [1.000000000000 ladder] vs shipped 0.3102 (+1.06% predicted mass)
+  KR: joint P/O 0.8903 [1.000000000000 ladder] vs shipped 0.8799 (+1.19% predicted mass)
+  MX: joint P/O 1.2215 [1.000000000000 ladder] vs shipped 1.2333 (-0.96% predicted mass)
+  US: joint P/O 0.7258 [1.000000000000 ladder] vs shipped 0.7123 (+1.90% predicted mass)
+
+########## timing convention: cif_end
+  CN: joint P/O 1.2102 [1.000000000000 ladder] vs shipped 1.1974 (+1.06% predicted mass)
+  KR: joint P/O 1.3846 [1.000000000000 ladder] vs shipped 1.3683 (+1.19% predicted mass)
+  MX: joint P/O 2.9410 [1.000000000000 ladder] vs shipped 2.9694 (-0.96% predicted mass)
+  US: joint P/O 1.3519 [1.000000000000 ladder] vs shipped 1.3267 (+1.90% predicted mass)
+
+wrote 4810 rows, 60 paired, 48 ladder rows; overlap=0
+EXIT=0

@@ -1,0 +1,58 @@
+{
+  "delta_years": 1.0,
+  "alloc": "last",
+  "source_file": "personperiod_pooled.csv",
+  "before": {
+    "rows": 430521,
+    "persons": 94005,
+    "event_rows": 6979,
+    "stroke_persons": 6979,
+    "event_weight": 6979.0,
+    "person_years": 1062340.9,
+    "median_interval_years": 2.029,
+    "max_interval_years": 26.009,
+    "dated_terminal_counts": {
+      "death_dated": 21591,
+      "alive_nr": 10491,
+      "death_status": 1756,
+      "vital_status_unknown": 202
+    }
+  },
+  "after": {
+    "rows": 1251843,
+    "persons": 94005,
+    "event_rows": 6979,
+    "stroke_persons": 6979,
+    "event_weight": 6979.0,
+    "person_years": 1062340.9,
+    "median_interval_years": 0.873,
+    "max_interval_years": 1.0,
+    "dated_terminal_counts": {
+      "death_dated": 21591,
+      "alive_nr": 10491,
+      "death_status": 1756,
+      "vital_status_unknown": 202
+    }
+  },
+  "rows_added": 821322,
+  "sub_intervals_per_parent_row_mean": 2.908,
+  "person_years_dropped_after_the_event_cell": 0.0,
+  "event_time_meaning": {
+    "uniform": "each piece of the parent window carries 1/n of the event: 'stroke somewhere in this window, uniformly', which is the assumption cif_mid already declares, with no invented date (PRIMARY allocation of this arm)",
+    "last": "the event in the parent's LAST piece - the convention the unsplit discrete-time likelihood implies, kept so the grid effect and the event-time effect can be told apart",
+    "midcell": "the event in the piece containing the parent midpoint, later pieces dropped: the closest discrete-time reading of the declared midpoint date"
+  },
+  "note": "each interval cut into ceil(L/delta) equal sub-intervals carrying the parent's start covariates; deaths and non-response tails keep their terminal status on the parent's last sub-interval because their t_end IS that date; a fractional event is emitted as a weighted 0/1 row pair in column row_weight",
+  "checks": [
+    "persons",
+    "total_event_weight",
+    "stroke_persons",
+    "dated_terminal_counts",
+    "grid_max",
+    "positive_lengths",
+    "positive_row_weights",
+    "at_most_one_event_per_window",
+    "person_time_identity_when_not_midcell",
+    "per_person_last_date"
+  ]
+}

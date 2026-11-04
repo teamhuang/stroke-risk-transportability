@@ -1,0 +1,40 @@
+{
+ "horizon": 4.0,
+ "horizon_rule": "cif_mid",
+ "reps": 120,
+ "fractions": [
+  0.02,
+  0.05,
+  0.1,
+  0.25,
+  0.5
+ ],
+ "min_band_events": 5,
+ "analysis_unit": "person (horizon frame, one row/person)",
+ "prediction_arm": "frozen logistic discrete-time hazard, cif_mid, common features (comparable to Table 12 / incident_subgroups)",
+ "strategies": {
+  "A_frozen": "no update",
+  "B_overall": "one population-wide intercept (current practice)",
+  "C_band": "one intercept per age band, unshrunk",
+  "D_age_linear": "intercept + linear centred baseline age",
+  "E_band_shrunk": "per-band intercept shrunk to overall (empirical Bayes)"
+ },
+ "sign_error_measure": "mean and max over age bands of |log(band mean predicted / observed)| on persons independent of the adaptation sample",
+ "band_cell_rule": "band evaluated on eval rows with n>=20 and >=5 events",
+ "horizon_person_accounting": {
+  "horizon_rule": "cif_mid",
+  "persons_total": 94005,
+  "event_within_horizon": 1845,
+  "death_within_horizon_no_stroke": 4668,
+  "death_counted_as_non_event": 4668,
+  "death_excluded_from_frame": 0,
+  "lost_before_horizon_excluded": 8264,
+  "stroke_free_through_horizon": 79228,
+  "evaluable": 85741,
+  "observed_prevalence_unweighted": 0.021518293465203345,
+  "observed_prevalence_ipcw": 0.020154189026142872,
+  "median_ipcw_weight": 1.1018982377425588,
+  "max_ipcw_weight": 1.1018982377425588
+ },
+ "n_detail_rows": 500
+}

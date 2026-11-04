@@ -1,0 +1,50 @@
+{
+  "delta_years": 1.0,
+  "source_file": "personperiod_pooled.csv",
+  "before": {
+    "rows": 430521,
+    "persons": 94005,
+    "events": 6979,
+    "person_years": 1062340.9,
+    "median_interval_years": 2.029,
+    "max_interval_years": 26.009,
+    "end_status_counts": {
+      "continued": 389502,
+      "death_dated": 21591,
+      "alive_nr": 10491,
+      "stroke": 6979,
+      "death_status": 1756,
+      "vital_status_unknown": 202
+    }
+  },
+  "after": {
+    "rows": 1251843,
+    "persons": 94005,
+    "events": 6979,
+    "person_years": 1062340.9,
+    "median_interval_years": 0.873,
+    "max_interval_years": 1.0,
+    "end_status_counts": {
+      "continued": 1210824,
+      "death_dated": 21591,
+      "alive_nr": 10491,
+      "stroke": 6979,
+      "death_status": 1756,
+      "vital_status_unknown": 202
+    }
+  },
+  "rows_added": 821322,
+  "sub_intervals_per_row_mean": 2.908,
+  "note": "each interval cut into ceil(L/delta) equal sub-intervals carrying the parent's start covariates; a terminal status stays on the parent's LAST sub-interval, so no dated event or death moves and no person-time is created or lost. The estimation target is unchanged - only the grid the hazard is written on",
+  "checks": [
+    "persons",
+    "events",
+    "terminal_end_status_counts",
+    "person_years",
+    "grid_max",
+    "positive_lengths",
+    "per_person_follow_up",
+    "per_person_last_date",
+    "stroke_row_identity"
+  ]
+}

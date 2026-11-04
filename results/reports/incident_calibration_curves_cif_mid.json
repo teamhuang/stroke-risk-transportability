@@ -1,0 +1,35 @@
+{
+ "horizon_rule": "cif_mid",
+ "groups_requested": 10,
+ "bootstrap_B": 500,
+ "local_fraction": 0.05,
+ "splits": 200,
+ "mean_offset_per_panel": {
+  "CN": -0.0597,
+  "KR": -0.477,
+  "MX": -1.2425,
+  "US": -0.1527
+ },
+ "group_definition": "deciles of the FROZEN model's predicted four-year risk, fixed across bootstrap resamples and across the repair",
+ "observed_estimator": "IPCW-weighted proportion of a first reported stroke within the horizon, competing death a determined non-event",
+ "interval_kinds": {
+  "obs_lo_obs_hi": "person-clustered bootstrap of the observed decile risk (panel noise)",
+  "rep_lo_rep_hi": "2.5/97.5 percentile of the repaired decile prediction across adaptation/evaluation splits (local-sample noise, NOT a population interval for the repaired model)"
+ },
+ "horizon_person_accounting": {
+  "horizon_rule": "cif_mid",
+  "persons_total": 94005,
+  "event_within_horizon": 1845,
+  "death_within_horizon_no_stroke": 4668,
+  "death_counted_as_non_event": 4668,
+  "death_excluded_from_frame": 0,
+  "lost_before_horizon_excluded": 8264,
+  "stroke_free_through_horizon": 79228,
+  "evaluable": 85741,
+  "observed_prevalence_unweighted": 0.021518293465203345,
+  "observed_prevalence_ipcw": 0.020154189026142872,
+  "median_ipcw_weight": 1.1018982377425588,
+  "max_ipcw_weight": 1.1018982377425588
+ },
+ "n_rows": 40
+}

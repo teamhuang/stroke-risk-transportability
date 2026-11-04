@@ -1,0 +1,60 @@
+{
+ "horizon": 4.0,
+ "models": [
+  "logistic",
+  "random_forest",
+  "xgboost"
+ ],
+ "self_check": "exact",
+ "persons_published_frame": 85741,
+ "persons_strict_frame": 78418,
+ "persons_leaving": 7323,
+ "leaving_by_country": {
+  "CN": 207,
+  "MX": 2980,
+  "US": 4136
+ },
+ "leaving_share_by_country": {
+  "CN": 0.0118,
+  "KR": NaN,
+  "MX": 0.1504,
+  "US": 0.1042
+ },
+ "leaving_by_last_end_status": {
+  "CN|death_status": 207,
+  "MX|alive_nr": 365,
+  "MX|death_dated": 2341,
+  "MX|death_status": 193,
+  "MX|vital_status_unknown": 81,
+  "US|alive_nr": 3137,
+  "US|death_dated": 988,
+  "US|death_status": 11
+ },
+ "median_unobserved_years_by_country": {
+  "CN": 1.5,
+  "MX": 6.0,
+  "US": 4.833
+ },
+ "published_counts": {
+  "horizon_rule": "cif_mid",
+  "persons_total": 94005,
+  "event_within_horizon": 1845,
+  "death_within_horizon_no_stroke": 4668,
+  "death_counted_as_non_event": 4668,
+  "death_excluded_from_frame": 0,
+  "lost_before_horizon_excluded": 8264,
+  "stroke_free_through_horizon": 79228,
+  "evaluable": 85741,
+  "observed_prevalence_unweighted": 0.021518293465203345,
+  "observed_prevalence_ipcw": 0.020154189026142872,
+  "median_ipcw_weight": 1.1018982377425588,
+  "max_ipcw_weight": 1.1018982377425588
+ },
+ "strict_counts": {
+  "evaluable": 78418,
+  "events": 1845,
+  "deaths_as_non_event": 4668,
+  "excluded": 15587,
+  "prevalence": 0.02352776148333291
+ }
+}

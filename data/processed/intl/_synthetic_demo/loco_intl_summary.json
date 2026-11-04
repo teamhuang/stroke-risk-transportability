@@ -1,0 +1,65 @@
+{
+  "countries": [
+    "EN",
+    "US",
+    "EU",
+    "CN"
+  ],
+  "internal_auroc": 0.6893786143671419,
+  "mean_loco_auroc": 0.6868177462833167,
+  "mean_decay": 0.002560868083825163,
+  "per_country": [
+    {
+      "held_country": "EN",
+      "n": 4000,
+      "events": 90,
+      "prevalence": 0.0225,
+      "auroc": 0.6092639954532537,
+      "auroc_lo": 0.5525744955726358,
+      "auroc_hi": 0.6709862240427992,
+      "brier": 0.02236568764519218,
+      "cal_intercept": -2.135689317529309,
+      "cal_slope": 0.45166879174706104,
+      "note": "ok"
+    },
+    {
+      "held_country": "US",
+      "n": 4000,
+      "events": 127,
+      "prevalence": 0.03175,
+      "auroc": 0.6919741151643419,
+      "auroc_lo": 0.6472139710887573,
+      "auroc_hi": 0.7349531846543249,
+      "brier": 0.03037606205527385,
+      "cal_intercept": -0.2689911186287729,
+      "cal_slope": 0.884709438649947,
+      "note": "ok"
+    },
+    {
+      "held_country": "EU",
+      "n": 4000,
+      "events": 115,
+      "prevalence": 0.02875,
+      "auroc": 0.7038263107828324,
+      "auroc_lo": 0.6511544974360401,
+      "auroc_hi": 0.7506345674404272,
+      "brier": 0.02732287135381617,
+      "cal_intercept": 0.15644958822317218,
+      "cal_slope": 1.0541933083019144,
+      "note": "ok"
+    },
+    {
+      "held_country": "CN",
+      "n": 4000,
+      "events": 133,
+      "prevalence": 0.03325,
+      "auroc": 0.7422065637328386,
+      "auroc_lo": 0.7001796603250467,
+      "auroc_hi": 0.7839916712740516,
+      "brier": 0.031348626072161795,
+      "cal_intercept": 1.1385295466802097,
+      "cal_slope": 1.284375222762038,
+      "note": "ok"
+    }
+  ]
+}

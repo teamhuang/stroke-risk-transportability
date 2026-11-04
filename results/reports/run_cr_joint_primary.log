@@ -1,0 +1,8 @@
+JOINT-PRIMARY | horizon=4.0 rule=cif_mid frac=0.05 splits=120 boot=200 dboot=200 reps=120 only=['agerecal', 'deciles', 'smooth', 'subgroups']
+[joint subgroups] wrote 20 rows
+[joint deciles] wrote 40 rows
+[joint smooth] MX a_bar=-1.190 frozen tail at 0.107 -> obs 0.047 [0.019,0.108]
+[joint smooth] wrote csv rows=480
+[joint age-recal] wrote 400 detail + 100 summary rows
+JOINT-PRIMARY done.
+EXIT=0

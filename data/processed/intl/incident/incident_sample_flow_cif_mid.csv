@@ -1,0 +1,6 @@
+country,cohort,censor_mode,adults_ever_interviewed,prevalent_at_entry_excluded,no_determinable_stroke,at_risk_persons,at_risk_without_analysable_interval,persons_with_intervals,person_intervals,incident_strokes_over_whole_panel,intervals_terminated_by_death,person_years,horizon_evaluable_persons,horizon_events,horizon_died_first_as_non_event,horizon_stroke_free,horizon_persons_lost_or_shorter_than_horizon,observed_incidence_unweighted,observed_incidence_ipcw,horizon_years,horizon_rule
+CN,CHARLS,death,24458,682,0,23776,4866,18910,47387,1160,1557,113135.7,17474,399,910,16165,1436,0.022834,0.021583,4.0,cif_mid
+KR,KLoSA,last_interview,11115,323,0,10792,1220,9572,54379,536,0,112883.2,8770,177,0,8593,802,0.020182,0.018676,4.0,cif_mid
+MX,MHAS,death,27092,565,2,26525,1369,25156,70961,933,6913,274945.7,19808,206,1251,18351,5348,0.0104,0.009496,4.0,cif_mid
+US,HRS,death,45233,2205,0,43028,2661,40367,257794,4350,14877,561376.3,39689,1063,2507,36119,678,0.026783,0.025175,4.0,cif_mid
+POOLED,all four,mixed,107898,3775,2,104121,10116,94005,430521,6979,23347,1062340.9,85741,1845,4668,79228,8264,0.021518,0.020154,4.0,cif_mid

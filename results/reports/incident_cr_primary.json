@@ -1,0 +1,969 @@
+{
+  "horizon_years": 4.0,
+  "rules": [
+    "cif_mid",
+    "cif_start",
+    "cif_end"
+  ],
+  "reps": 40,
+  "bootstrap_B": 500,
+  "fractions": [
+    0.02,
+    0.05,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "variants": {
+    "V1_logit_cause_specific": {
+      "link": "logit",
+      "length_enters_as": "covariate",
+      "composition": "1 - exp(-Lambda_stroke), death ignored"
+    },
+    "V2_logit_competing": {
+      "link": "logit",
+      "length_enters_as": "covariate",
+      "composition": "Aalen-Johansen CIF over both cause-specific hazards"
+    },
+    "V3_ph_cause_specific": {
+      "link": "cloglog",
+      "length_enters_as": "offset",
+      "composition": "1 - exp(-Lambda_stroke), death ignored"
+    },
+    "V4_ph_competing": {
+      "link": "cloglog",
+      "length_enters_as": "offset",
+      "composition": "Aalen-Johansen CIF over both cause-specific hazards"
+    }
+  },
+  "estimand_of_the_observed_target": "Aalen-Johansen cumulative incidence of a first stroke within the horizon, competing death kept in as a determined non-event",
+  "estimand_the_published_composition_estimates": "1 - exp(-Lambda_stroke(horizon)), the cause-specific stroke risk under a censoring interpretation of death",
+  "horizon_person_accounting": {
+    "cif_mid": {
+      "horizon_rule": "cif_mid",
+      "persons_total": 94005,
+      "event_within_horizon": 1845,
+      "death_within_horizon_no_stroke": 4668,
+      "death_counted_as_non_event": 4668,
+      "death_excluded_from_frame": 0,
+      "lost_before_horizon_excluded": 8264,
+      "stroke_free_through_horizon": 79228,
+      "evaluable": 85741,
+      "observed_prevalence_unweighted": 0.021518293465203345,
+      "observed_prevalence_ipcw": 0.020154189026142872,
+      "median_ipcw_weight": 1.1018982377425588,
+      "max_ipcw_weight": 1.1018982377425588
+    },
+    "cif_start": {
+      "horizon_rule": "cif_start",
+      "persons_total": 94005,
+      "event_within_horizon": 3048,
+      "death_within_horizon_no_stroke": 4668,
+      "death_counted_as_non_event": 4668,
+      "death_excluded_from_frame": 0,
+      "lost_before_horizon_excluded": 8264,
+      "stroke_free_through_horizon": 78025,
+      "evaluable": 85741,
+      "observed_prevalence_unweighted": 0.03554892058641723,
+      "observed_prevalence_ipcw": 0.03343805659868662,
+      "median_ipcw_weight": 1.1028326359865235,
+      "max_ipcw_weight": 1.1028326359865235
+    },
+    "cif_end": {
+      "horizon_rule": "cif_end",
+      "persons_total": 94005,
+      "event_within_horizon": 1307,
+      "death_within_horizon_no_stroke": 4668,
+      "death_counted_as_non_event": 4668,
+      "death_excluded_from_frame": 0,
+      "lost_before_horizon_excluded": 8264,
+      "stroke_free_through_horizon": 79766,
+      "evaluable": 85741,
+      "observed_prevalence_unweighted": 0.015243582416813426,
+      "observed_prevalence_ipcw": 0.014450574585050006,
+      "median_ipcw_weight": 1.1011729570948747,
+      "max_ipcw_weight": 1.1011729570948747
+    }
+  },
+  "diagnostics": {
+    "cif_mid|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.01629,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.755,
+      "mean_pred_other_composition": 0.01624,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.5327,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01563,
+        "4": 0.01563,
+        "8": 0.02396
+      }
+    },
+    "cif_mid|CN|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.01617,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7491,
+      "mean_pred_other_composition": 0.01637,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.0584,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01552,
+        "4": 0.01546,
+        "8": 0.01654
+      }
+    },
+    "cif_mid|CN|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01766,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.8183,
+      "mean_pred_other_composition": 0.0172,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01692,
+        "4": 0.01692,
+        "8": 0.01692
+      }
+    },
+    "cif_mid|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01713,
+      "obs_prev": 0.02158,
+      "pred_over_obs": 0.7935,
+      "mean_pred_other_composition": 0.01774,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 0.9506,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01644,
+        "4": 0.0162,
+        "8": 0.01609
+      }
+    },
+    "cif_mid|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02176,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1649,
+      "mean_pred_other_composition": 0.02158,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.1514,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02155,
+        "4": 0.02155,
+        "8": 0.02482
+      }
+    },
+    "cif_mid|KR|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02156,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1547,
+      "mean_pred_other_composition": 0.02177,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.7436,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02136,
+        "4": 0.02126,
+        "8": 0.01603
+      }
+    },
+    "cif_mid|KR|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02188,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1715,
+      "mean_pred_other_composition": 0.02119,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02168,
+        "4": 0.02168,
+        "8": 0.02168
+      }
+    },
+    "cif_mid|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02118,
+      "obs_prev": 0.01868,
+      "pred_over_obs": 1.1338,
+      "mean_pred_other_composition": 0.0219,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 0.9424,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02095,
+        "4": 0.0206,
+        "8": 0.02043
+      }
+    },
+    "cif_mid|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03036,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.1969,
+      "mean_pred_other_composition": 0.03032,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.9715,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.0298,
+        "4": 0.0298,
+        "8": 0.02895
+      }
+    },
+    "cif_mid|MX|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03021,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.1817,
+      "mean_pred_other_composition": 0.03046,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6999,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.02965,
+        "4": 0.02957,
+        "8": 0.02086
+      }
+    },
+    "cif_mid|MX|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02926,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.0816,
+      "mean_pred_other_composition": 0.02862,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02873,
+        "4": 0.02873,
+        "8": 0.02873
+      }
+    },
+    "cif_mid|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02853,
+      "obs_prev": 0.0095,
+      "pred_over_obs": 3.0041,
+      "mean_pred_other_composition": 0.02936,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 0.9546,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02797,
+        "4": 0.02761,
+        "8": 0.02743
+      }
+    },
+    "cif_mid|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.02477,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.9839,
+      "mean_pred_other_composition": 0.02461,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6943,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02414,
+        "4": 0.02414,
+        "8": 0.01676
+      }
+    },
+    "cif_mid|US|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.02449,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.9726,
+      "mean_pred_other_composition": 0.0249,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.503,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02387,
+        "4": 0.02373,
+        "8": 0.01214
+      }
+    },
+    "cif_mid|US|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02275,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.9035,
+      "mean_pred_other_composition": 0.02226,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02221,
+        "4": 0.02221,
+        "8": 0.02221
+      }
+    },
+    "cif_mid|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02215,
+      "obs_prev": 0.02518,
+      "pred_over_obs": 0.8799,
+      "mean_pred_other_composition": 0.02286,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 0.9549,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02162,
+        "4": 0.02134,
+        "8": 0.02121
+      }
+    },
+    "cif_start|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.01629,
+      "obs_prev": 0.0552,
+      "pred_over_obs": 0.2951,
+      "mean_pred_other_composition": 0.01624,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.5327,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01563,
+        "4": 0.01563,
+        "8": 0.02396
+      }
+    },
+    "cif_start|CN|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.01616,
+      "obs_prev": 0.0552,
+      "pred_over_obs": 0.2928,
+      "mean_pred_other_composition": 0.01637,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.0584,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01552,
+        "4": 0.01546,
+        "8": 0.01654
+      }
+    },
+    "cif_start|CN|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01766,
+      "obs_prev": 0.0552,
+      "pred_over_obs": 0.3199,
+      "mean_pred_other_composition": 0.0172,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01692,
+        "4": 0.01692,
+        "8": 0.01692
+      }
+    },
+    "cif_start|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01712,
+      "obs_prev": 0.0552,
+      "pred_over_obs": 0.3102,
+      "mean_pred_other_composition": 0.01774,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 0.9506,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01644,
+        "4": 0.0162,
+        "8": 0.01609
+      }
+    },
+    "cif_start|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02175,
+      "obs_prev": 0.02406,
+      "pred_over_obs": 0.904,
+      "mean_pred_other_composition": 0.02158,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.1514,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02155,
+        "4": 0.02155,
+        "8": 0.02482
+      }
+    },
+    "cif_start|KR|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02156,
+      "obs_prev": 0.02406,
+      "pred_over_obs": 0.8961,
+      "mean_pred_other_composition": 0.02177,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.7436,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02136,
+        "4": 0.02126,
+        "8": 0.01603
+      }
+    },
+    "cif_start|KR|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02188,
+      "obs_prev": 0.02406,
+      "pred_over_obs": 0.9091,
+      "mean_pred_other_composition": 0.02119,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02168,
+        "4": 0.02168,
+        "8": 0.02168
+      }
+    },
+    "cif_start|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02117,
+      "obs_prev": 0.02406,
+      "pred_over_obs": 0.8799,
+      "mean_pred_other_composition": 0.0219,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 0.9424,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02095,
+        "4": 0.0206,
+        "8": 0.02043
+      }
+    },
+    "cif_start|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03035,
+      "obs_prev": 0.02312,
+      "pred_over_obs": 1.3125,
+      "mean_pred_other_composition": 0.03032,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.9715,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.0298,
+        "4": 0.0298,
+        "8": 0.02895
+      }
+    },
+    "cif_start|MX|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03021,
+      "obs_prev": 0.02312,
+      "pred_over_obs": 1.3063,
+      "mean_pred_other_composition": 0.03046,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6999,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.02965,
+        "4": 0.02957,
+        "8": 0.02086
+      }
+    },
+    "cif_start|MX|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02925,
+      "obs_prev": 0.02312,
+      "pred_over_obs": 1.2651,
+      "mean_pred_other_composition": 0.02862,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02873,
+        "4": 0.02873,
+        "8": 0.02873
+      }
+    },
+    "cif_start|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02852,
+      "obs_prev": 0.02312,
+      "pred_over_obs": 1.2333,
+      "mean_pred_other_composition": 0.02936,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 0.9546,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02797,
+        "4": 0.02761,
+        "8": 0.02743
+      }
+    },
+    "cif_start|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.02476,
+      "obs_prev": 0.03108,
+      "pred_over_obs": 0.7966,
+      "mean_pred_other_composition": 0.02461,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6943,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02414,
+        "4": 0.02414,
+        "8": 0.01676
+      }
+    },
+    "cif_start|US|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.02448,
+      "obs_prev": 0.03108,
+      "pred_over_obs": 0.7874,
+      "mean_pred_other_composition": 0.0249,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.503,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02387,
+        "4": 0.02373,
+        "8": 0.01214
+      }
+    },
+    "cif_start|US|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02274,
+      "obs_prev": 0.03108,
+      "pred_over_obs": 0.7315,
+      "mean_pred_other_composition": 0.02226,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02221,
+        "4": 0.02221,
+        "8": 0.02221
+      }
+    },
+    "cif_start|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02214,
+      "obs_prev": 0.03108,
+      "pred_over_obs": 0.7123,
+      "mean_pred_other_composition": 0.02286,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 0.9549,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02162,
+        "4": 0.02134,
+        "8": 0.02121
+      }
+    },
+    "cif_end|CN|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.0163,
+      "obs_prev": 0.01431,
+      "pred_over_obs": 1.1393,
+      "mean_pred_other_composition": 0.01624,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.5327,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01563,
+        "4": 0.01563,
+        "8": 0.02396
+      }
+    },
+    "cif_end|CN|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 21,
+      "mean_pred": 0.01617,
+      "obs_prev": 0.01431,
+      "pred_over_obs": 1.1304,
+      "mean_pred_other_composition": 0.01637,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.0584,
+      "duration_mean_risk_by_step": {
+        "1": 0.01563,
+        "2": 0.01552,
+        "4": 0.01546,
+        "8": 0.01654
+      }
+    },
+    "cif_end|CN|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01767,
+      "obs_prev": 0.01431,
+      "pred_over_obs": 1.2348,
+      "mean_pred_other_composition": 0.0172,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01692,
+        "4": 0.01692,
+        "8": 0.01692
+      }
+    },
+    "cif_end|CN|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.01713,
+      "obs_prev": 0.01431,
+      "pred_over_obs": 1.1974,
+      "mean_pred_other_composition": 0.01774,
+      "closed_form_cif_mean": 0.01618,
+      "duration_ratio_8_over_1": 0.9506,
+      "duration_mean_risk_by_step": {
+        "1": 0.01692,
+        "2": 0.01644,
+        "4": 0.0162,
+        "8": 0.01609
+      }
+    },
+    "cif_end|KR|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02176,
+      "obs_prev": 0.01548,
+      "pred_over_obs": 1.4058,
+      "mean_pred_other_composition": 0.02158,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 1.1514,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02155,
+        "4": 0.02155,
+        "8": 0.02482
+      }
+    },
+    "cif_end|KR|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 21,
+      "mean_pred": 0.02157,
+      "obs_prev": 0.01548,
+      "pred_over_obs": 1.3935,
+      "mean_pred_other_composition": 0.02177,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.7436,
+      "duration_mean_risk_by_step": {
+        "1": 0.02155,
+        "2": 0.02136,
+        "4": 0.02126,
+        "8": 0.01603
+      }
+    },
+    "cif_end|KR|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02189,
+      "obs_prev": 0.01548,
+      "pred_over_obs": 1.4138,
+      "mean_pred_other_composition": 0.02119,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02168,
+        "4": 0.02168,
+        "8": 0.02168
+      }
+    },
+    "cif_end|KR|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 20,
+      "mean_pred": 0.02118,
+      "obs_prev": 0.01548,
+      "pred_over_obs": 1.3683,
+      "mean_pred_other_composition": 0.0219,
+      "closed_form_cif_mean": 0.02008,
+      "duration_ratio_8_over_1": 0.9424,
+      "duration_mean_risk_by_step": {
+        "1": 0.02168,
+        "2": 0.02095,
+        "4": 0.0206,
+        "8": 0.02043
+      }
+    },
+    "cif_end|MX|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03036,
+      "obs_prev": 0.00961,
+      "pred_over_obs": 3.16,
+      "mean_pred_other_composition": 0.03032,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.9715,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.0298,
+        "4": 0.0298,
+        "8": 0.02895
+      }
+    },
+    "cif_end|MX|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 21,
+      "n_iter_death": 22,
+      "mean_pred": 0.03021,
+      "obs_prev": 0.00961,
+      "pred_over_obs": 3.145,
+      "mean_pred_other_composition": 0.03046,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6999,
+      "duration_mean_risk_by_step": {
+        "1": 0.0298,
+        "2": 0.02965,
+        "4": 0.02957,
+        "8": 0.02086
+      }
+    },
+    "cif_end|MX|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02926,
+      "obs_prev": 0.00961,
+      "pred_over_obs": 3.046,
+      "mean_pred_other_composition": 0.02862,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02873,
+        "4": 0.02873,
+        "8": 0.02873
+      }
+    },
+    "cif_end|MX|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 22,
+      "mean_pred": 0.02853,
+      "obs_prev": 0.00961,
+      "pred_over_obs": 2.9694,
+      "mean_pred_other_composition": 0.02936,
+      "closed_form_cif_mean": 0.0274,
+      "duration_ratio_8_over_1": 0.9546,
+      "duration_mean_risk_by_step": {
+        "1": 0.02873,
+        "2": 0.02797,
+        "4": 0.02761,
+        "8": 0.02743
+      }
+    },
+    "cif_end|US|V1_logit_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.02478,
+      "obs_prev": 0.0167,
+      "pred_over_obs": 1.4837,
+      "mean_pred_other_composition": 0.02461,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.6943,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02414,
+        "4": 0.02414,
+        "8": 0.01676
+      }
+    },
+    "cif_end|US|V2_logit_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 22,
+      "n_iter_death": 23,
+      "mean_pred": 0.0245,
+      "obs_prev": 0.0167,
+      "pred_over_obs": 1.4666,
+      "mean_pred_other_composition": 0.0249,
+      "closed_form_cif_mean": null,
+      "duration_ratio_8_over_1": 0.503,
+      "duration_mean_risk_by_step": {
+        "1": 0.02414,
+        "2": 0.02387,
+        "4": 0.02373,
+        "8": 0.01214
+      }
+    },
+    "cif_end|US|V3_ph_cause_specific": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02276,
+      "obs_prev": 0.0167,
+      "pred_over_obs": 1.3624,
+      "mean_pred_other_composition": 0.02226,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 1.0,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02221,
+        "4": 0.02221,
+        "8": 0.02221
+      }
+    },
+    "cif_end|US|V4_ph_competing": {
+      "converged_stroke": true,
+      "converged_death": true,
+      "n_iter_stroke": 23,
+      "n_iter_death": 25,
+      "mean_pred": 0.02216,
+      "obs_prev": 0.0167,
+      "pred_over_obs": 1.3267,
+      "mean_pred_other_composition": 0.02286,
+      "closed_form_cif_mean": 0.02132,
+      "duration_ratio_8_over_1": 0.9549,
+      "duration_mean_risk_by_step": {
+        "1": 0.02221,
+        "2": 0.02162,
+        "4": 0.02134,
+        "8": 0.02121
+      }
+    }
+  },
+  "leakage_checks": {
+    "adaptation_eval_person_overlap_total": 0,
+    "adaptation_eval_rows_audited": 9600,
+    "ipcw_and_coverage_note": "IPCW weights and the determined/non-determined status come from the whole held-out country's frame because they DEFINE the estimand; no evaluation LABEL is used to fit any repair - the intercept sees only the local sample's predictions and labels, and the local and evaluation person sets are asserted disjoint.",
+    "klosa_death_ascertainment": "KLoSA contributes 0 observed deaths, so Korea's competing-risks target and death hazard are not identified from Korean data alone"
+  },
+  "n_rows": 19192,
+  "horizon_person_accounting_note": "Recomputed after the run by the same horizon_frame() the script calls; the writer kept only the last rule's accounting under the first rule's key (mislabelled field, fixed in incident_cr_primary.py).",
+  "note_mislabelled_field_before_fix": {
+    "key_present": [
+      "cif_mid"
+    ],
+    "its_horizon_rule_value": "cif_end",
+    "meaning": "the cif_mid slot held the cif_end accounting"
+  }
+}

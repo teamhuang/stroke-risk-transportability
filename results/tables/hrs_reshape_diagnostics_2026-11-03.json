@@ -1,0 +1,368 @@
+{
+ "source": "data\\raw\\intl\\HRS\\randhrs\\randhrs1992_2022v1.sas7bdat",
+ "bmi_mode": "measured",
+ "sas_rows": 45234,
+ "sas_persons": 45234,
+ "std_rows": 296195,
+ "std_persons": 45233,
+ "std_events": 23925,
+ "std_prevalence": 0.08077448977869309,
+ "death_date_coverage_persons": 19144,
+ "times_extract_rows": 511004,
+ "interview_date_coverage_of_extract": 0.579641255254362,
+ "iwstat_counts_by_wave": {
+  "1": {
+   "1": 12652,
+   "4": 245
+  },
+  "2": {
+   "1": 19642,
+   "4": 1300,
+   "5": 226,
+   "7": 23
+  },
+  "3": {
+   "1": 17991,
+   "4": 2001,
+   "5": 1088,
+   "6": 226,
+   "7": 32
+  },
+  "4": {
+   "1": 21384,
+   "4": 2173,
+   "5": 1345,
+   "6": 1312,
+   "7": 246
+  },
+  "5": {
+   "1": 19578,
+   "4": 2486,
+   "5": 1441,
+   "6": 2656,
+   "7": 445
+  },
+  "6": {
+   "1": 18165,
+   "4": 2250,
+   "5": 1571,
+   "6": 4097,
+   "7": 683
+  },
+  "7": {
+   "1": 20129,
+   "4": 2330,
+   "5": 1297,
+   "6": 5641,
+   "7": 914
+  },
+  "8": {
+   "1": 18469,
+   "4": 2196,
+   "5": 1384,
+   "6": 6925,
+   "7": 1495
+  },
+  "9": {
+   "1": 17217,
+   "4": 2144,
+   "5": 1298,
+   "6": 8305,
+   "7": 1630
+  },
+  "10": {
+   "1": 22034,
+   "4": 2240,
+   "5": 1609,
+   "6": 9603,
+   "7": 1723
+  },
+  "11": {
+   "1": 20554,
+   "4": 2265,
+   "5": 1202,
+   "6": 11212,
+   "7": 2151
+  },
+  "12": {
+   "1": 18747,
+   "4": 2551,
+   "5": 1343,
+   "6": 12414,
+   "7": 2476
+  },
+  "13": {
+   "1": 20912,
+   "4": 3340,
+   "5": 1480,
+   "6": 13757,
+   "7": 2733
+  },
+  "14": {
+   "1": 17146,
+   "4": 5391,
+   "5": 1221,
+   "6": 15237,
+   "7": 3353
+  },
+  "15": {
+   "1": 15723,
+   "4": 5049,
+   "5": 1447,
+   "6": 16458,
+   "7": 3767
+  },
+  "16": {
+   "1": 15856,
+   "4": 5748,
+   "5": 1382,
+   "6": 17905,
+   "7": 4343
+  }
+ },
+ "per_wave": {
+  "1.0": {
+   "n": 12651,
+   "events": 335.0,
+   "prev": 0.0265,
+   "median_interview_date": 1992.673
+  },
+  "2.0": {
+   "n": 19641,
+   "events": 1132.0,
+   "prev": 0.0576,
+   "median_interview_date": 1994.418
+  },
+  "3.0": {
+   "n": 17991,
+   "events": 1228.0,
+   "prev": 0.0683,
+   "median_interview_date": 1996.455
+  },
+  "4.0": {
+   "n": 21384,
+   "events": 1526.0,
+   "prev": 0.0714,
+   "median_interview_date": 1998.368
+  },
+  "5.0": {
+   "n": 19578,
+   "events": 1553.0,
+   "prev": 0.0793,
+   "median_interview_date": 2000.37
+  },
+  "6.0": {
+   "n": 18165,
+   "events": 1556.0,
+   "prev": 0.0857,
+   "median_interview_date": 2002.536
+  },
+  "7.0": {
+   "n": 20129,
+   "events": 1626.0,
+   "prev": 0.0808,
+   "median_interview_date": 2004.455
+  },
+  "8.0": {
+   "n": 18469,
+   "events": 1620.0,
+   "prev": 0.0877,
+   "median_interview_date": 2006.453
+  },
+  "9.0": {
+   "n": 17217,
+   "events": 1625.0,
+   "prev": 0.0944,
+   "median_interview_date": 2008.455
+  },
+  "10.0": {
+   "n": 22033,
+   "events": 1836.0,
+   "prev": 0.0833,
+   "median_interview_date": 2010.873
+  },
+  "11.0": {
+   "n": 20554,
+   "events": 1854.0,
+   "prev": 0.0902,
+   "median_interview_date": 2012.537
+  },
+  "12.0": {
+   "n": 18746,
+   "events": 1761.0,
+   "prev": 0.0939,
+   "median_interview_date": 2014.41
+  },
+  "13.0": {
+   "n": 20912,
+   "events": 1826.0,
+   "prev": 0.0873,
+   "median_interview_date": 2016.706
+  },
+  "14.0": {
+   "n": 17146,
+   "events": 1549.0,
+   "prev": 0.0903,
+   "median_interview_date": 2018.621
+  },
+  "15.0": {
+   "n": 15723,
+   "events": 1425.0,
+   "prev": 0.0906,
+   "median_interview_date": 2020.537
+  },
+  "16.0": {
+   "n": 15856,
+   "events": 1473.0,
+   "prev": 0.0929,
+   "median_interview_date": 2022.788
+  }
+ },
+ "assets_and_bmi_by_wave": {
+  "1.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 12652,
+   "assets_le0": 1019,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 12652
+  },
+  "2.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 19642,
+   "assets_le0": 1418,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 19434
+  },
+  "3.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 17991,
+   "assets_le0": 1224,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 17773
+  },
+  "4.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 21384,
+   "assets_le0": 1520,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 21099
+  },
+  "5.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 19578,
+   "assets_le0": 1288,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 19289
+  },
+  "6.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 18165,
+   "assets_le0": 1207,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 17818
+  },
+  "7.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 20129,
+   "assets_le0": 1516,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 19750
+  },
+  "8.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 18469,
+   "assets_le0": 1398,
+   "pmbmi_nonnull": 7128,
+   "selfbmi_nonnull": 18175
+  },
+  "9.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 17217,
+   "assets_le0": 1348,
+   "pmbmi_nonnull": 6446,
+   "selfbmi_nonnull": 16983
+  },
+  "10.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 22034,
+   "assets_le0": 3002,
+   "pmbmi_nonnull": 8409,
+   "selfbmi_nonnull": 21602
+  },
+  "11.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 20554,
+   "assets_le0": 2808,
+   "pmbmi_nonnull": 7951,
+   "selfbmi_nonnull": 20244
+  },
+  "12.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 18747,
+   "assets_le0": 2282,
+   "pmbmi_nonnull": 7500,
+   "selfbmi_nonnull": 18442
+  },
+  "13.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 20912,
+   "assets_le0": 2952,
+   "pmbmi_nonnull": 7750,
+   "selfbmi_nonnull": 20578
+  },
+  "14.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 17146,
+   "assets_le0": 2372,
+   "pmbmi_nonnull": 6753,
+   "selfbmi_nonnull": 16903
+  },
+  "15.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 15723,
+   "assets_le0": 1970,
+   "pmbmi_nonnull": 0,
+   "selfbmi_nonnull": 15497
+  },
+  "16.0": {
+   "rows_ever_in_sample": 45234,
+   "assets_nonnull": 15856,
+   "assets_le0": 2249,
+   "pmbmi_nonnull": 5569,
+   "selfbmi_nonnull": 15573
+  }
+ },
+ "feature_nonnull_pct": {
+  "stroke": 100.0,
+  "age": 100.0,
+  "sex": 100.0,
+  "education": 99.82,
+  "marital": 99.89,
+  "income_pir": 90.02,
+  "bmi": 19.41,
+  "ever_smoker": 99.33,
+  "current_smoker": 98.67,
+  "alcohol": 99.96,
+  "hypertension": 100.0,
+  "high_cholesterol": 0.0,
+  "diabetes": 100.0,
+  "heart_attack": 100.0
+ },
+ "binary_feature_prevalence_pct": {
+  "stroke": 8.08,
+  "ever_smoker": 56.8,
+  "current_smoker": 15.16,
+  "alcohol": 51.97,
+  "hypertension": 52.88,
+  "diabetes": 20.0,
+  "heart_attack": 22.12
+ },
+ "rules_applied": {
+  "rows_interviewed_with_determinable_stroke": 296199,
+  "rows_dropped_under_age_20": 4,
+  "bmi_impossible_to_nan": 23,
+  "bmi_max_before": 82.6,
+  "current_smoker_structural_zero": 0,
+  "income_pir_log_sd": 1.9540983974178407
+ }
+}

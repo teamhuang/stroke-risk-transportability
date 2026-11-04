@@ -1,0 +1,70 @@
+{
+  "horizon": 4.0,
+  "rows_pooled": 430521,
+  "rows_strict": 396481,
+  "coverage_conventions": {
+    "published_permissive": "coverage from interval end; alive-but-not-interviewed rows credit stroke-free exposure",
+    "published_strict_partial": "stroke-free criterion censored at t_ask, but a death observed after the last answer still counts as a determined non-event",
+    "this_file_strict_full": "all risk time and all outcome observation end at t_ask; a death after the last answer is unobserved, so the person leaves the frame"
+  },
+  "died_after_last_answer_dropped_by_full_truncation": {
+    "CN": 910,
+    "KR": 0,
+    "MX": 1251,
+    "US": 2507
+  },
+  "rows_dropped_after_t_ask": 34040,
+  "rows_truncated_at_t_ask": 0,
+  "persons_pooled": 94005,
+  "persons_strict": 89069,
+  "exposure_years_pooled": 1062340.9,
+  "exposure_years_strict": 959629.1,
+  "events_pooled": 6979,
+  "events_strict": 6979,
+  "cif_mid_frame_from_strict": {
+    "horizon_rule": "cif_mid",
+    "persons_total": 89069,
+    "event_within_horizon": 1845,
+    "death_within_horizon_no_stroke": 0,
+    "death_counted_as_non_event": 0,
+    "death_excluded_from_frame": 0,
+    "lost_before_horizon_excluded": 15319,
+    "stroke_free_through_horizon": 71905,
+    "evaluable": 73750,
+    "observed_prevalence_unweighted": 0.02501694915254237,
+    "observed_prevalence_ipcw": 0.022110859068522632,
+    "median_ipcw_weight": 1.2112833087705597,
+    "max_ipcw_weight": 1.2112833087705597
+  },
+  "self_check": "exact match to incident_ascertainment_sensitivity strict_t_ask",
+  "by_country": {
+    "CN": {
+      "intervals": 45820,
+      "events": 1160,
+      "exposure_years": 111186.3,
+      "frame_evaluable": 16357,
+      "frame_events": 399
+    },
+    "KR": {
+      "intervals": 54379,
+      "events": 536,
+      "exposure_years": 112883.2,
+      "frame_evaluable": 8770,
+      "frame_events": 177
+    },
+    "MX": {
+      "intervals": 62690,
+      "events": 933,
+      "exposure_years": 247252.8,
+      "frame_evaluable": 15577,
+      "frame_events": 206
+    },
+    "US": {
+      "intervals": 233592,
+      "events": 4350,
+      "exposure_years": 488306.8,
+      "frame_evaluable": 33046,
+      "frame_events": 1063
+    }
+  }
+}
